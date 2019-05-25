@@ -1,0 +1,77 @@
+<HTML lang="en">
+<HEAD>
+<!--Created by Vinay Kumar Pilania-->
+<META NAME="description" CONTENT="Vinay Pilania's Webpage">
+<META NAME="keywords" CONTENT="Robotics, Mobile Manipulation, Autonomous Mobile Manipulation, Motion Planning, Path Planning, 
+Sensor-Based Motion Planning, Planning Under Uncertainty, Planning And Control Under Uncertainty, Exploration, 2D, 3D, NBV, 
+Next Best View, Mobile Manipulator Planner, Mobile Manipulator Planning, Robot World, Environment, Octomap, Frontiers, Mobile Base, 
+Manipulator, Manipulator Planning, ROS, Powerbot, 6 DOF, 9 DOF, Adaptive, Hierarchical, Adaptive Planner, Hierarchical Planner, 
+Planning, POMDP, Mobile Manipulator, HAMP, HAMP-U, Algorithms, Robotic Algorithms, Humanoids, Wheeled Mobile Manipulator, Belief, 
+Space Planning, Belief Roadmap, Uncertainty, PRM, RRT, Probabilistic Completeness Proof, Probabilistically Complete.">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="myweb.css">
+<TITLE> Vinay Pilania - Key Algorithmic Contributions </TITLE>
+<script type="text/javascript" src="swfobject.js"></script>
+</HEAD>
+
+<!--Body starts from here-->
+<BODY>
+
+<!--Table1: This Table is for putting keywords (like HOME, RESEARCH, RESUME, OTHERS) and corresponding links-->
+<TABLE BORDER=0 WIDTH="900" CELLPADDING="10" CELLSPACING="0" ALIGN="Center" >
+    <TR>    <!--Table1 ROW1-->
+	    <TH>
+		    <A CLASS="menu" HREF="index.html">Home</A> &nbsp | &nbsp 
+		    <A CLASS="menu" HREF="research.html">Research</A> &nbsp | &nbsp 
+		    <A CLASS="menu" HREF="">Publications</A> &nbsp | &nbsp 
+		    <A CLASS="menu" HREF="">Resume</A> &nbsp | &nbsp 
+			<A CLASS="menu" HREF="">Others</A>
+	    </TH>
+    </TR>
+</TABLE>
+
+
+<!--Table2: This Table contains the remaining part of this page-->
+<TABLE BORDER=0 WIDTH="900" CELLPADDING="10" CELLSPACING="0" ALIGN="Center" >
+	<TR>
+        <TD>
+        	<BR><FONT SIZE="+1" COLOR="#6699FF"> <B>Original Algorithmic Contributions</B></FONT>
+        		<P CLASS="justifytext"><B>HAMP:</B> A Hierarchical and Adaptive Mobile Manipulator Planner (HAMP) that plans for both the base and the arm in a judicious manner for a given start and goal mobile manipulator configurations. It decomposes the full C-space into two sub-spaces (base sub-space and manipulator sub-space). The search in 
+        		manipulator space is invoked only for those points in the base-space where it is needed. A mathematical 
+        		proof is provided to show the probabilistic completeness of the planner.
+                <A CLASS="file" HREF="PdfFiles/PilaniaAndGuptaHumanoids-14.pdf">[Humanoids 2014]</A>
+
+        		<P CLASS="justifytext"><B>LAS:</B> A Localization Aware efficient Sampling (LAS) strategy for sampling-based motion planning under uncertainty that puts more samples in regions where sensor data is able to achieve higher uncertainty reduction while maintaining adequate samples in regions where uncertainty reduction is poor. A new measure of  “localization ability of a sample” is introduced that “extracts” how well a sensor observation at a sample point reduces uncertainty without explicitly knowing the path leading to it. This measure is used to determine if a newly sampled point lies in well-localized region or poor-localized region. A mathematical proof is provided to show that a  stochastic planner that uses our sampling strategy is probabilistically complete under some reasonable conditions on  parameters. 
+                <A CLASS="file" HREF="PdfFiles/IROS-15.pdf">[IROS 2015]</A>
+
+        		<P CLASS="justifytext"><B>LAC:</B>  A Localization Aware efficient Connection (LAC) strategy for sampling-based motion planning under uncertainty that eliminates the inefficient edges that would be created in current connection schemes but do not contribute toward better localization. It uses an uncertainty aware approach in connecting the new sample to the neighbouring nodes, i.e., it uses an uncertainty measure (as opposed to distance) to connect the new sample to a neighboring node so that the new sample is reachable with least uncertainty (“the closest”), and furthermore, connections to other neighbouring nodes are made only if the new path to them (via the new sample) helps to reduce the uncertainty at those nodes.
+                <A CLASS="file" HREF="PdfFiles/AURO-15.pdf">[AURO 2017]</A>
+
+        		<P CLASS="justifytext"><B>NBO:</B> The core of our framework (for retrieving an object from a pile) is a Next Best Option (NBO) planner that plans for the (task oriented) next best object to be removed from a pile in order to  facilitate the quick retrieval of the target object. It assumes a set of segmented regions (objects) as input and determines the sequence of actions need to be executed in order to retrieve the target object. The modified version 
+        		of Thin Plate Spline-Robust Point Matching (a non-rigid registration algorithm that computes the transformation and warping components between two point sets) is used to estimate the occluded portion of the target object. Then an optimal grasp pose is computed using a grasp bounding box, estimated shape of the target object and the set of segmented regions. The overlap (of bounding box at optimal grasp pose with each of the segmented regions) along with a tree structure (to determine the layout of how different objects are placed in the current scene, such as which is on the top of what) is the deciding factor in the selection of next best option.
+                <A CLASS="file" HREF="PdfFiles/PilaniaNBO2017.pdf">[ICRA 2018 - sub.]</A> 
+                <A CLASS="file" HREF="index.html#ICRA2018">[Video]</A>
+
+        	<P><FONT SIZE="+1" COLOR="#6699FF"> <B>Extended Algorithmic Contributions</B></FONT>
+        		<P CLASS="justifytext"><B>HAMP-U:</B> HAMP with base pose Uncertainty (HAMP-U) is an extension to HAMP to incorporate base pose uncertainty. It uses belief space planning to account for localization uncertainty associated with the mobile
+				base position and ensures that the resultant path for the mobile manipulator has low uncertainty at the goal.
+                <A CLASS="file" HREF="PdfFiles/PilaniaAndGuptaAURO-14.pdf">[AURO 2015]</A>
+
+        		<P CLASS="justifytext"><B>HAMP-BUA:</B> HAMP with Base pose Uncertainty and its propagation to Arm motions (HAMP-BUA) is an extension to HAMP-U to incorporate base pose uncertainty and the effects of this uncertainty on manipulator motions. A modification of LAS and LAC is used to gain the efficiency while the robustness is achieved by incorporating uncertainty at different levels. While HAMP-U did consider base uncertainty propagation, there were no collision  probability constraint incorporated in the search process, even for the base.
+                <A CLASS="file" HREF="PdfFiles/PilaniaAndGuptaIJRR2017.pdf">[IJRR 2017]</A>
+
+        		<P CLASS="justifytext"><B>HAMP-BUA-TC:</B> HAMP-BUA with Task Constraints (HAMP-BUA-TC) is an extension to HAMP-BUA to incorporate task constraints. Basically, the manipulator C-space planning in HAMP framework is replaced by the task space planning.
+                <A CLASS="file" HREF="">[IEEE RAM 2017 - sub.]</A>
+
+            <P><FONT SIZE="+1" COLOR="#6699FF"> <B>System Side Contributions</B></FONT>
+                <P CLASS="justifytext"><B>Mobile Pick-and-Place Task in Unknown Static Environments:</B> We considered a challenging real world problem which is very critical in service robotics. It is a first step toward putting theory into practice,  and demonstrates the competence of HAMP-BUA planner. The mobile manipulator (Powerbot mobile base + 6 DOF Schunk arm) is equipped with a Kinect sensor mounted on the base (provides an area scan depth map) and a eye-in-hand Hokuyo line scan  sensor (mounted on the wrist of the arm with the last joint being used to obtain a area scan depth map) and uses these  sensors to explore the environment. A key aspect of our integrated system is that the planner works in tandem with  base and arm exploration (view  planning) modules that explore the unknown environment. Note that unlike other implemented mobile manipulator planners, we assume unknown areas of environment as obstacles and not free and a region must be  scanned free before the robot will move there. HAMP-BUA is central to this problem because each planning module of the system must consider uncertainty so that the paths are safe to execute.
+                <A CLASS="file" HREF="PdfFiles/PilaniaAndGuptaIJRR2017.pdf">[IJRR 2017]</A>
+                <A CLASS="file" HREF="">[IEEE RAM 2017 - sub.]</A>
+                <A CLASS="file" HREF="index.html#PickPlaceVideos">[Videos]</A>
+
+		</TD>
+	</TR>
+</TABLE>
+
+</BODY>
+</HTML>
