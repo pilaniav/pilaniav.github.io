@@ -1,364 +1,353 @@
-<HTML lang="en">
-<HEAD>
-<!--Created by Vinay Kumar Pilania-->
-<META NAME="description" CONTENT="Vinay Pilania's Webpage">
-<META NAME="keywords" CONTENT="Robotics, Mobile Manipulation, Autonomous Mobile Manipulation, Motion Planning, Path Planning, 
-Sensor-Based Motion Planning, Planning Under Uncertainty, Planning And Control Under Uncertainty, Exploration, 2D, 3D, NBV, 
-Next Best View, Mobile Manipulator Planner, Mobile Manipulator Planning, Robot World, Environment, Octomap, Frontiers, Mobile Base, 
-Manipulator, Manipulator Planning, ROS, Powerbot, 6 DOF, 9 DOF, Adaptive, Hierarchical, Adaptive Planner, Hierarchical Planner, 
-Planning, POMDP, Mobile Manipulator, HAMP, HAMP-U, Algorithms, Robotic Algorithms, Humanoids, Wheeled Mobile Manipulator, Belief, 
-Space Planning, Belief Roadmap, Uncertainty, PRM, RRT, Probabilistic Completeness Proof, Probabilistically Complete.">
-
-<LINK REL="stylesheet" TYPE="text/css" HREF="myweb.css">
-<TITLE> Vinay Pilania - Research </TITLE>
-<script type="text/javascript" src="swfobject.js"></script>
-</HEAD>
-
-<!--Body starts from here-->
-<BODY>
-
-<!--Table1: This Table is for putting keywords (like HOME, RESEARCH, RESUME, OTHERS) and corresponding links-->
-<TABLE BORDER=0 WIDTH="900" CELLPADDING="10" CELLSPACING="0" ALIGN="Center" >
-    <TR>    <!--Table1 ROW1-->
-	    <TH>
-		    <A CLASS="menu" HREF="index.html">Home</A> &nbsp | &nbsp 
-		    <A CLASS="menuactive" HREF="">Research</A> &nbsp | &nbsp 
-		    <A CLASS="menu" HREF="">Publications</A> &nbsp | &nbsp 
-		    <A CLASS="menu" HREF="">Resume</A> &nbsp | &nbsp 
-			<A CLASS="menu" HREF="">Others</A>
-	    </TH>
-    </TR>
-</TABLE>
-
-<!--Table2: This Table contains the rest part of Research page-->
-<TABLE BORDER=0 WIDTH="900" CELLPADDING="10" CELLSPACING="0" ALIGN="Center" >
-	<TR>
-	    <TD WIDTH="100%">
-		    <!--Research Field 1: Autonomous mobile manipulation-->
-			<BR><FONT SIZE="+1" COLOR="#6699FF"> <B>Autonomous Mobile Manipulation</B></FONT>
-			    <!--Research Field 1: Contributions-->
-			    <UL>
-				    <li><A HREF="research.html#HAMP">A Hierarchical and Adaptive Mobile Manipulator Planner (HAMP).</A>
-				</UL>
-			<!--Research Field 2: Path planning under uncertainty-->
-			<BR><FONT SIZE="+1" COLOR="#6699FF"> <B>Path Planning under Uncertainty</B></FONT>
-			    <!--Research Field 2: Contributions-->
-				<UL>
-				    <li><A HREF="research.html#HAMP-U">A Hierarchical and Adaptive Mobile Manipulator Planner with Base Pose Uncertainty (HAMP-U).</A>
-					<li><A HREF="research.html#LAS">A Localization Aware Sampling Strategy for Motion Planning under Uncertainty (LAS).</A>
-					<li><A HREF="research.html#LASandLAC">Localization Aware Sampling and Connection Strategies for Incremental Motion Planning under Uncertainty.</A>
-					<li><A HREF="research.html#HAMP-BAU">Mobile Manipulator Planning under Uncertainty in Unknown Environments (HAMP-BAU and HAMP-BAU-TC).</A>
-				</UL>
-			<!--Research Field 3: Autonomous Systems-->
-			<BR><FONT SIZE="+1" COLOR="#6699FF"> <B>Intelligent Systems</B></FONT>
-			    <!--Research Field 3: Contributions-->
-			    <UL>
-				    <li><A HREF="research.html#HAMP-BAU">Autonomous and Integrated System for Mobile Pick-and-Place Tasks in Unknown Environments.</A>
-				</UL>
-				
-			<!--Some blank lines (space) before horizontal line-->
-			<BR><BR><P><HR WIDTH="100%" noshade>
-	        <FONT SIZE="+1"> <B id="HAMP">A Hierarchical and Adaptive Mobile Manipulator Planner (HAMP)</B></FONT>
-            <HR WIDTH="100%" noshade>
-			
-			<!--Research Field 1: Contribution 1: Detailed Explanation and videos-->
-			<P CLASS="justifytext"> <B>Abstract:-</B> We present a Hierarchical and Adaptive Mobile Manipulator Planner (HAMP) that plans for both the base and 
-			the arm in a judicious manner - allowing the manipulator to change its configuration autonomously when needed if the current arm 
-			configuration is in collision with the environment as the mobile manipulator moves along the planned path. This is in contrast to 
-			current implemented approaches that are conservative and fold the arm into a fixed home configuration. Our planner first constructs 
-			a base roadmap and then for each node in the roadmap it checks for collision status of current manipulator configuration along the 
-			edges formed with adjacent nodes, if the current manipulator configuration is in collision, the manipulator C-space is searched for 
-			a new reachable configuration such that it is collision-free as the mobile manipulator moves along the edge. We show that HAMP is 
-			probabilistically complete. We compared HAMP with full 9D PRM and observed that HAMP outperforms the full 9D PRM in each of the 
-			performance criteria, i.e., computational time, percentage of successful attempts, base path length, and most importantly, undesired 
-			motions of the arm.
-			
-			<P> <B>Read More:- </B>
-				<UL>
-				    <li>Vinay Pilania and Kamal Gupta, "A Hierarchical and Adaptive Mobile Manipulator Planner", <i>IEEE-RAS International 
-					Conference on Humanoid Robots (Humanoids)</i>, Madrid, November 2014, pp. 45-51. <A CLASS="file" HREF="PdfFiles/PilaniaAndGuptaHumanoids-14.pdf">[PDF]</A> 
-					<A CLASS="file" HREF="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7041336">[IEEE Xplore Link]</A>
-				</UL>
-			
-			<!--*****************************************************************-->
-			<!--************************Video Adding Starts Here*****************-->
-			<!--*****************************************************************-->
-			<H4>Simulation videos corresponding to scenarios B & C</H4>
-			<!--Simulation videos corresponding to scenarios B & C-->
-			<TABLE BORDER=0 WIDTH="100%" CELLPADDING="0" CELLSPACING="0" ALIGN="Center">
-			    <TR>
-                    <TD WIDTH="40%" ALIGN="Center"> 
-                        <p id="player1"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
-                        <script type="text/javascript">
-        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
-        	                s1.addParam("allowfullscreen","true");
-        	                s1.addVariable("file","videos/hamp_exp2.flv");
-        	                s1.addVariable("image","videos/hamp_exp2.png");
-        	                s1.write("player1");
-                        </script>    
-                    </TD>
-                    <TD WIDTH="40%" ALIGN="Center"> 
-                        <p id="player2"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
-                        <script type="text/javascript">
-        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
-        	                s1.addParam("allowfullscreen","true");
-        	                s1.addVariable("file","videos/hamp_exp3.flv");
-        	                s1.addVariable("image","videos/hamp_exp3.png");
-        	                s1.write("player2");
-                        </script>    
-                    </TD>
-                </TR>
-            </TABLE>
-			
-			<H4>Simulation videos corresponding to scenarios D & E</H4>
-			<!--Simulation videos corresponding to scenarios D & E-->
-			<TABLE BORDER=0 WIDTH="100%" CELLPADDING="0" CELLSPACING="0" ALIGN="Center">
-			    <TR>
-                    <TD WIDTH="40%" ALIGN="Center"> 
-                        <p id="player3"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
-                        <script type="text/javascript">
-        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
-        	                s1.addParam("allowfullscreen","true");
-        	                s1.addVariable("file","videos/hamp_exp4.flv");
-        	                s1.addVariable("image","videos/hamp_exp4.png");
-        	                s1.write("player3");
-                        </script>    
-                    </TD>
-                    <TD WIDTH="40%" ALIGN="Center"> 
-                        <p id="player4"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
-                        <script type="text/javascript">
-        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
-        	                s1.addParam("allowfullscreen","true");
-        	                s1.addVariable("file","videos/hamp_exp5.flv");
-        	                s1.addVariable("image","videos/hamp_exp5.png");
-        	                s1.write("player4");
-                        </script>    
-                    </TD>
-                </TR>
-            </TABLE>
-			<!--*****************************************************************-->
-			<!--************************Video Adding Ends Here*******************-->
-			<!--*****************************************************************-->
-			
-			
-			<!--*****************************************************************-->
-			<!--Research Field 1: Contribution 2: Detailed Explanation and videos-->
-			<!--*******************Put the next one below************************-->
-			<!--*****************************************************************-->
-						
-			
-			<!--Research Field 2: Contribution 1: Detailed Explanation and videos-->
-			<!--Some blank lines (space) before horizontal line-->
-			<P><BR><HR WIDTH="100%" noshade>
-			<FONT SIZE="+1"> <B id="HAMP-U">A Hierarchical and Adaptive Mobile Manipulator Planner with Base Pose Uncertainty (HAMP-U)</B></FONT>
-            <HR WIDTH="100%" noshade>
-			<!--************************Put it below*****************************-->
-			<P CLASS="justifytext"> <B>Abstract:-</B> We present a Hierarchical and Adaptive Mobile Manipulator Planner (HAMP) that plans for both the base 
-			and the arm in a judicious manner - allowing the manipulator to change its configuration autonomously when needed if the current 
-			arm configuration is in collision with the environment as the mobile manipulator moves along the planned path. This is in contrast 
-			to current implemented approaches that are conservative and fold the arm into a fixed home configuration. Our planner first constructs 
-			a base roadmap and then for each node in the roadmap it checks for collision status of current manipulator configuration along the edges 
-			formed with adjacent nodes, if the current manipulator configuration is in collision, the manipulator C-space is searched for a new 
-			reachable configuration such that it is collision-free as the mobile manipulator moves along the edge and a path from current configuration 
-			to the new reachable configuration is computed. We show that HAMP is probabilistically complete. We compared HAMP with full 9D PRM and 
-			observed that the full 9D PRM is outperformed by HAMP in each of the performance criteria, i.e., computational time, percentage of 
-			successful attempts, base path length, and most importantly, undesired motions of the arm. We also evaluated the tree versions of HAMP, 
-			with RRT and Bi-directional RRT as core underlying sub-planners, and observed similar advantages, although the time saving  for 
-			Bi-directional RRT version is modest. We then present an extension of HAMP (we call it HAMP-U) that uses belief space planning 
-			to account for localization uncertainty associated with the mobile base position and ensures that the resultant path for the mobile 
-			manipulator has low uncertainty at the goal. Our  experimental results show that the paths generated by HAMP-U are less likely to 
-			result in collision and are safer to execute than those generated by HAMP (without incorporating uncertainty), thereby showing the 
-			importance of incorporating base pose uncertainty in our overall HAMP algorithm.
-			
-			<P> <B>Read More:- </B>
-				<UL>
-				    <li>Vinay Pilania and Kamal Gupta, "A Hierarchical and Adaptive Mobile Manipulator Planner with Base Pose Uncertainty", 
-					<i>Autonomous Robots</i>, Volume 39, Issue 1, June 2015, pp. 65-85. <A CLASS="file" HREF="PdfFiles/PilaniaAndGuptaAURO-14.pdf">[PDF]</A>
-					<A CLASS="file" HREF="http://link.springer.com/article/10.1007/s10514-015-9427-2">[Springer Link]</A>
-				</UL>
-
-			
-			<!--*****************************************************************-->
-			<!--************************Video Adding Starts Here*****************-->
-			<!--*****************************************************************-->
-			<H4>Real experiment on SFU Mobile Manipulator (left one)</H4>
-			<!--Real experiment on SFU Mobile Manipulator-->
-			<TABLE BORDER=0 WIDTH="100%" CELLPADDING="0" CELLSPACING="0" ALIGN="Center">
-			    <TR>
-                    <TD WIDTH="40%" ALIGN="Center"> 
-                        <p id="player5"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
-                        <script type="text/javascript">
-        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
-        	                s1.addParam("allowfullscreen","true");
-        	                s1.addVariable("file","videos/hamp_real_exp.flv");
-        	                s1.addVariable("image","videos/hamp_real_exp.png");
-        	                s1.write("player5");
-                        </script>    
-                    </TD>
-                    <TD WIDTH="40%" ALIGN="Center"> 
-                        <p id="player6"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
-                        <script type="text/javascript">
-        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
-        	                s1.addParam("allowfullscreen","true");
-        	                s1.addVariable("file","videos/hamp_exp2_gazebo.flv");
-        	                s1.addVariable("image","videos/hamp_exp2_gazebo.png");
-        	                s1.write("player6");
-                        </script>    
-                    </TD>
-                </TR>
-            </TABLE>
-			<!--*****************************************************************-->
-			<!--************************Video Adding Ends Here*******************-->
-			<!--*****************************************************************-->
-			
-			
-			<!--Research Field 2: Contribution 2: Detailed Explanation and photos-->
-			<!--Some blank lines (space) before horizontal line-->
-			<P><BR><HR WIDTH="100%" noshade>
-			<FONT SIZE="+1"> <B id="LAS">A Localization Aware Sampling Strategy for Motion Planning under Uncertainty (LAS)</B></FONT>
-            <HR WIDTH="100%" noshade>
-			<!--************************Put it below*****************************-->
-			<P CLASS="justifytext"> <B>Abstract:-</B> We present a localization aware efficient sampling strategy for sampling-based motion 
-			planning under uncertainty that uses a new notion of localization ability of a sample. It puts more samples in regions where sensor 
-			data is able to achieve higher uncertainty reduction while maintaining adequate samples in regions where uncertainty reduction is 
-			poor. This leads to a less dense roadmap and hence results in significant time savings in the path search phase. We provide simulation 
-			results that show stochastic planners with our sampling strategy place less samples and find a well-localized path in shorter time with 
-			little compromise on the quality of path as compared to existing sampling techniques. We also show that a stochastic planner that uses 
-			our sampling strategy is probabilistically complete under some reasonable conditions on parameters.
-
-			<P> <B>Read More:- </B>
-				<UL>
-				    <li>Vinay Pilania and Kamal Gupta, "A Localization Aware Sampling Strategy for Motion Planning under Uncertainty", 
-					<i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i>, Hamburg, September 2015, pp. 6093-6099. 
-					<A CLASS="file" HREF="PdfFiles/IROS-15.pdf">[PDF]</A> 
-					<A CLASS="file" HREF="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7354245">[IEEE Xplore Link]</A>
-				</UL>
-				
-			
-			<!--Research Field 2: Contribution 3: Detailed Explanation and photos-->
-			<!--Some blank lines (space) before horizontal line-->
-			<P><BR><HR WIDTH="100%" noshade>
-			<FONT SIZE="+1"> <B id="LASandLAC">Localization Aware Sampling and Connection Strategies for Incremental Motion Planning under Uncertainty</B></FONT>
-            <HR WIDTH="100%" noshade>
-			<!--************************Put it below*****************************-->
-			<P CLASS="justifytext"> <B>Abstract:-</B> We present efficient localization aware sampling and connection strategies for incremental 
-			sampling-based stochastic motion planners. For sampling, we introduce a new measure of localization ability of a sample, one that is 
-			independent of the path taken to reach the sample and depends only on the sensor measurement at the sample. Using this measure, our 
-			sampling strategy puts more samples in regions where sensor data is able to achieve higher uncertainty reduction while maintaining 
-			adequate samples in regions where uncertainty reduction is poor. This leads to a less dense roadmap and hence results in significant 
-			time savings. We also show that a stochastic planner that uses our sampling strategy is probabilistically complete under some reasonable 
-			conditions on parameters. We then present a localization aware efficient connection strategy that uses an uncertainty aware approach in 
-			connecting the new sample to the neighbouring nodes, i.e., it uses an uncertainty measure (as opposed to distance) to connect the new 
-			sample to a neighbouring node so that the new sample is reachable with least uncertainty ("the closest"), and furthermore, connections 
-			to other neighbouring nodes are made only if the new path to them (via the new sample) helps to reduce the uncertainty at those nodes. 
-			This is in contrast to current incremental stochastic motion planners that simply connect the new sample to all of the neighbouring nodes 
-			and therefore, take more search queue iterations to update the paths (i.e., uncertainty propagation). Hence, our efficient connection 
-			strategy, in addition to eliminating the inefficient edges that do not contribute to better localization, also reduces the number of 
-			search queue iterations. We provide simulation results that show that a) our localization aware sampling strategy places less samples 
-			and find a well-localized path in shorter time with little compromise on the quality of path as compared to existing sampling techniques, 
-			b) our localization aware connection strategy finds a well-localized path in shorter time with no compromise on the quality of path as 
-			compared to existing connection techniques, and finally c) combined use of our sampling and connection strategies further reduces the 
-			planner run time.
-			
-			<P> <B>Read More:- </B>
-				<UL>
-				    <li>Vinay Pilania and Kamal Gupta, "Localization Aware Sampling and Connection Strategies for Incremental Motion Planning under Uncertainty", 
-					<i>Autonomous Robots (accepted on Dec 10, 2015)</i>. <A CLASS="file" HREF="PdfFiles/AURO-15.pdf">[PDF]</A>
-					<A CLASS="file" HREF="http://link.springer.com/article/10.1007/s10514-015-9536-y">[Springer Link]</A>
-				</UL>
-				
-			
-			<!--Research Field 2: Contribution 4: Detailed Explanation and photos-->
-			<!--Some blank lines (space) before horizontal line-->
-			<P><BR><HR WIDTH="100%" noshade>
-			<FONT SIZE="+1"> <B id="HAMP-BAU">Mobile Manipulator Planning under Uncertainty in Unknown Environments (HAMP-BAU and HAMP-BAU-TC)</B></FONT>
-            <HR WIDTH="100%" noshade>
-			<!--************************Put it below*****************************-->
-			<P CLASS="justifytext"> <B>Abstract:-</B> We present a sampling-based mobile manipulator planner that considers the base pose 
-			uncertainty and the effects of this uncertainty on manipulator motions. The overall planner has three distinct and novel 
-			features: i) it uses the Hierarchical and Adaptive Mobile Manipulator Planner (HAMP) that plans for both the base and the arm 
-			in a judicious manner, ii) it uses localization aware sampling and connection strategies to consider only those nodes and edges 
-			which contribute toward better localization, iii) it incorporates base pose uncertainty along the edges (where arm remains static) 
-			and the effects of this uncertainty are considered on arm motion. We call this overall planner HAMP-BAU, where BAU stands for Base 
-			Uncertainty and its propagation to Arm motions. We then present an extension of HAMP-BAU to incorporate task space constraint, 
-			called HAMP-BAU-TC. We evaluate both planners in known environment and show that our planners find a safer path as compared to other 
-			variants where uncertainty is not considered at different levels as mentioned above. Furthermore, we incorporate our planners within 
-			an integrated and fully autonomous system for mobile pick-and-place tasks in unknown static environments. A key aspect of our 
-			integrated system is that the planner works in tandem with base and arm exploration modules that explore the unknown environment. 
-			Our system is implemented both in simulation and on the actual SFU mobile manipulator and we present the corresponding results. 
-			It demonstrates a level of competency in exploring unknown environments for carrying out pick-and-place tasks that has not been 
-			demonstrated before.
-
-			
-			<P> <B>Read More:- </B>
-				<UL>
-				    <li>Vinay Pilania and Kamal Gupta, "Mobile Manipulator Planning under Uncertainty in Unknown Environments", 
-					<i>submitted to IJRR (under review)</i>.
-				</UL>
-			
-			<!--*****************************************************************-->
-			<!--************************Video Adding Starts Here*****************-->
-			<!--*****************************************************************-->
-			<H4>Real Experiments: [left] HAMP-BAU in unknown environment, [right] HAMP-BAU-TC in known environment</H4>
-			<!--Real experiment on SFU Mobile Manipulator-->
-			<TABLE BORDER=0 WIDTH="100%" CELLPADDING="0" CELLSPACING="0" ALIGN="Center">
-			    <TR>
-                    <TD WIDTH="40%" ALIGN="Center"> 
-                        <p id="player7"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
-                        <script type="text/javascript">
-        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
-        	                s1.addParam("allowfullscreen","true");
-        	                s1.addVariable("file","videos/hamp_bau_3.flv");
-        	                s1.addVariable("image","videos/hamp_bau_3.png");
-        	                s1.write("player7");
-                        </script>    
-                    </TD>
-                    <TD WIDTH="40%" ALIGN="Center"> 
-                        <p id="player8"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
-                        <script type="text/javascript">
-        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
-        	                s1.addParam("allowfullscreen","true");
-        	                s1.addVariable("file","videos/hamp_bau_4.flv");
-        	                s1.addVariable("image","videos/hamp_bau_4.png");
-        	                s1.write("player8");
-                        </script>    
-                    </TD>
-                </TR>
-            </TABLE>
-			
-			<H4>Simulations: [left] HAMP-BAU in unknown environment, [right] HAMP-BAU-TC in known environment</H4>
-			<!--Real experiment on SFU Mobile Manipulator-->
-			<TABLE BORDER=0 WIDTH="100%" CELLPADDING="0" CELLSPACING="0" ALIGN="Center">
-			    <TR>
-                    <TD WIDTH="40%" ALIGN="Center"> 
-                        <p id="player9"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
-                        <script type="text/javascript">
-        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
-        	                s1.addParam("allowfullscreen","true");
-        	                s1.addVariable("file","videos/hamp_bau_1.flv");
-        	                s1.addVariable("image","videos/hamp_bau_1.png");
-        	                s1.write("player9");
-                        </script>    
-                    </TD>
-                    <TD WIDTH="40%" ALIGN="Center"> 
-                        <p id="player10"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
-                        <script type="text/javascript">
-        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
-        	                s1.addParam("allowfullscreen","true");
-        	                s1.addVariable("file","videos/hamp_bau_2.flv");
-        	                s1.addVariable("image","videos/hamp_bau_2.png");
-        	                s1.write("player10");
-                        </script>    
-                    </TD>
-                </TR>
-            </TABLE>
-			<!--*****************************************************************-->
-			<!--************************Video Adding Ends Here*******************-->
-			<!--*****************************************************************-->
-			
-		</TD>
-	</TR>
-</TABLE>
-
-</BODY>
-</HTML>
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width"><title>http://www-personal.umich.edu/~vpilania/research.html</title><link rel="stylesheet" type="text/css" href="resource://content-accessible/viewsource.css"></head><body id="viewsource" class="highlight" style="-moz-tab-size: 4" contextmenu="actions"><pre id="line1"><span></span><span class="error" title="Start tag seen without seeing a doctype first. Expected “&lt;!DOCTYPE html&gt;”.">&lt;<span class="start-tag">HTML</span> <span class="attribute-name">lang</span>="<a class="attribute-value">en</a>"&gt;</span><span>
+<span id="line2"></span></span><span>&lt;<span class="start-tag">HEAD</span>&gt;</span><span>
+<span id="line3"></span></span><span class="comment">&lt;!--Created by Vinay Kumar Pilania--&gt;</span><span>
+<span id="line4"></span></span><span>&lt;<span class="start-tag">META</span> <span class="attribute-name">NAME</span>="<a class="attribute-value">description</a>" <span class="attribute-name">CONTENT</span>="<a class="attribute-value">Vinay Pilania's Webpage</a>"&gt;</span><span>
+<span id="line5"></span></span><span>&lt;<span class="start-tag">META</span> <span class="attribute-name">NAME</span>="<a class="attribute-value">keywords</a>" <span class="attribute-name">CONTENT</span>="<a class="attribute-value">Robotics, Mobile Manipulation, Autonomous Mobile Manipulation, Motion Planning, Path Planning, 
+<span id="line6"></span>Sensor-Based Motion Planning, Planning Under Uncertainty, Planning And Control Under Uncertainty, Exploration, 2D, 3D, NBV, 
+<span id="line7"></span>Next Best View, Mobile Manipulator Planner, Mobile Manipulator Planning, Robot World, Environment, Octomap, Frontiers, Mobile Base, 
+<span id="line8"></span>Manipulator, Manipulator Planning, ROS, Powerbot, 6 DOF, 9 DOF, Adaptive, Hierarchical, Adaptive Planner, Hierarchical Planner, 
+<span id="line9"></span>Planning, POMDP, Mobile Manipulator, HAMP, HAMP-U, Algorithms, Robotic Algorithms, Humanoids, Wheeled Mobile Manipulator, Belief, 
+<span id="line10"></span>Space Planning, Belief Roadmap, Uncertainty, PRM, RRT, Probabilistic Completeness Proof, Probabilistically Complete.</a>"&gt;</span><span>
+<span id="line11"></span>
+<span id="line12"></span></span><span>&lt;<span class="start-tag">LINK</span> <span class="attribute-name">REL</span>="<a class="attribute-value">stylesheet</a>" <span class="attribute-name">TYPE</span>="<a class="attribute-value">text/css</a>" <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/myweb.css">myweb.css</a>"&gt;</span><span>
+<span id="line13"></span></span><span>&lt;<span class="start-tag">TITLE</span>&gt;</span><span> Vinay Pilania - Research </span><span>&lt;/<span class="end-tag">TITLE</span>&gt;</span><span>
+<span id="line14"></span></span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>" <span class="attribute-name">src</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/swfobject.js">swfobject.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line15"></span></span><span>&lt;/<span class="end-tag">HEAD</span>&gt;</span><span>
+<span id="line16"></span>
+<span id="line17"></span></span><span class="comment">&lt;!--Body starts from here--&gt;</span><span>
+<span id="line18"></span></span><span>&lt;<span class="start-tag">BODY</span>&gt;</span><span>
+<span id="line19"></span>
+<span id="line20"></span></span><span class="comment">&lt;!--Table1: This Table is for putting keywords (like HOME, RESEARCH, RESUME, OTHERS) and corresponding links--&gt;</span><span>
+<span id="line21"></span></span><span>&lt;<span class="start-tag">TABLE</span> <span class="attribute-name">BORDER</span>=<a class="attribute-value">0</a> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">900</a>" <span class="attribute-name">CELLPADDING</span>="<a class="attribute-value">10</a>" <span class="attribute-name">CELLSPACING</span>="<a class="attribute-value">0</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>" &gt;</span><span>
+<span id="line22"></span>    </span><span>&lt;<span class="start-tag">TR</span>&gt;</span><span>    </span><span class="comment">&lt;!--Table1 ROW1--&gt;</span><span>
+<span id="line23"></span>	    </span><span>&lt;<span class="start-tag">TH</span>&gt;</span><span>
+<span id="line24"></span>		    </span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">menu</a>" <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/index.html">index.html</a>"&gt;</span><span>Home</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span> <span class="error entity" title="Named character reference was not terminated by a semicolon. (Or “&amp;” should have been escaped as “&amp;amp;”.)"><span>&amp;</span>nbsp</span> | <span class="error entity" title="Named character reference was not terminated by a semicolon. (Or “&amp;” should have been escaped as “&amp;amp;”.)"><span>&amp;</span>nbsp</span> 
+<span id="line25"></span>		    </span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">menuactive</a>" <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/research.html"></a>"&gt;</span><span>Research</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span> <span class="error entity" title="Named character reference was not terminated by a semicolon. (Or “&amp;” should have been escaped as “&amp;amp;”.)"><span>&amp;</span>nbsp</span> | <span class="error entity" title="Named character reference was not terminated by a semicolon. (Or “&amp;” should have been escaped as “&amp;amp;”.)"><span>&amp;</span>nbsp</span> 
+<span id="line26"></span>		    </span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">menu</a>" <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/research.html"></a>"&gt;</span><span>Publications</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span> <span class="error entity" title="Named character reference was not terminated by a semicolon. (Or “&amp;” should have been escaped as “&amp;amp;”.)"><span>&amp;</span>nbsp</span> | <span class="error entity" title="Named character reference was not terminated by a semicolon. (Or “&amp;” should have been escaped as “&amp;amp;”.)"><span>&amp;</span>nbsp</span> 
+<span id="line27"></span>		    </span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">menu</a>" <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/research.html"></a>"&gt;</span><span>Resume</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span> <span class="error entity" title="Named character reference was not terminated by a semicolon. (Or “&amp;” should have been escaped as “&amp;amp;”.)"><span>&amp;</span>nbsp</span> | <span class="error entity" title="Named character reference was not terminated by a semicolon. (Or “&amp;” should have been escaped as “&amp;amp;”.)"><span>&amp;</span>nbsp</span> 
+<span id="line28"></span>			</span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">menu</a>" <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/research.html"></a>"&gt;</span><span>Others</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span>
+<span id="line29"></span>	    </span><span>&lt;/<span class="end-tag">TH</span>&gt;</span><span>
+<span id="line30"></span>    </span><span>&lt;/<span class="end-tag">TR</span>&gt;</span><span>
+<span id="line31"></span></span><span>&lt;/<span class="end-tag">TABLE</span>&gt;</span><span>
+<span id="line32"></span>
+<span id="line33"></span></span><span class="comment">&lt;!--Table2: This Table contains the rest part of Research page--&gt;</span><span>
+<span id="line34"></span></span><span>&lt;<span class="start-tag">TABLE</span> <span class="attribute-name">BORDER</span>=<a class="attribute-value">0</a> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">900</a>" <span class="attribute-name">CELLPADDING</span>="<a class="attribute-value">10</a>" <span class="attribute-name">CELLSPACING</span>="<a class="attribute-value">0</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>" &gt;</span><span>
+<span id="line35"></span>	</span><span>&lt;<span class="start-tag">TR</span>&gt;</span><span>
+<span id="line36"></span>	    </span><span>&lt;<span class="start-tag">TD</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>"&gt;</span><span>
+<span id="line37"></span>		    </span><span class="comment">&lt;!--Research Field 1: Autonomous mobile manipulation--&gt;</span><span>
+<span id="line38"></span>			</span><span>&lt;<span class="start-tag">BR</span>&gt;</span><span></span><span>&lt;<span class="start-tag">FONT</span> <span class="attribute-name">SIZE</span>="<a class="attribute-value">+1</a>" <span class="attribute-name">COLOR</span>="<a class="attribute-value">#6699FF</a>"&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span>&gt;</span><span>Autonomous Mobile Manipulation</span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">FONT</span>&gt;</span><span>
+<span id="line39"></span>			    </span><span class="comment">&lt;!--Research Field 1: Contributions--&gt;</span><span>
+<span id="line40"></span>			    </span><span>&lt;<span class="start-tag">UL</span>&gt;</span><span>
+<span id="line41"></span>				    </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/research.html#HAMP">research.html#HAMP</a>"&gt;</span><span>A Hierarchical and Adaptive Mobile Manipulator Planner (HAMP).</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span>
+<span id="line42"></span>				</span><span>&lt;/<span class="end-tag">UL</span>&gt;</span><span>
+<span id="line43"></span>			</span><span class="comment">&lt;!--Research Field 2: Path planning under uncertainty--&gt;</span><span>
+<span id="line44"></span>			</span><span>&lt;<span class="start-tag">BR</span>&gt;</span><span></span><span>&lt;<span class="start-tag">FONT</span> <span class="attribute-name">SIZE</span>="<a class="attribute-value">+1</a>" <span class="attribute-name">COLOR</span>="<a class="attribute-value">#6699FF</a>"&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span>&gt;</span><span>Path Planning under Uncertainty</span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">FONT</span>&gt;</span><span>
+<span id="line45"></span>			    </span><span class="comment">&lt;!--Research Field 2: Contributions--&gt;</span><span>
+<span id="line46"></span>				</span><span>&lt;<span class="start-tag">UL</span>&gt;</span><span>
+<span id="line47"></span>				    </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/research.html#HAMP-U">research.html#HAMP-U</a>"&gt;</span><span>A Hierarchical and Adaptive Mobile Manipulator Planner with Base Pose Uncertainty (HAMP-U).</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span>
+<span id="line48"></span>					</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/research.html#LAS">research.html#LAS</a>"&gt;</span><span>A Localization Aware Sampling Strategy for Motion Planning under Uncertainty (LAS).</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span>
+<span id="line49"></span>					</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/research.html#LASandLAC">research.html#LASandLAC</a>"&gt;</span><span>Localization Aware Sampling and Connection Strategies for Incremental Motion Planning under Uncertainty (LAS and LAC).</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span>
+<span id="line50"></span>					</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/research.html#HAMP-BAU">research.html#HAMP-BAU</a>"&gt;</span><span>Mobile Manipulator Planning under Uncertainty in Unknown Environments (HAMP-BUA and HAMP-BUA-TC).</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span>
+<span id="line51"></span>				</span><span>&lt;/<span class="end-tag">UL</span>&gt;</span><span>
+<span id="line52"></span>			</span><span class="comment">&lt;!--Research Field 3: Autonomous Systems--&gt;</span><span>
+<span id="line53"></span>			</span><span>&lt;<span class="start-tag">BR</span>&gt;</span><span></span><span>&lt;<span class="start-tag">FONT</span> <span class="attribute-name">SIZE</span>="<a class="attribute-value">+1</a>" <span class="attribute-name">COLOR</span>="<a class="attribute-value">#6699FF</a>"&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span>&gt;</span><span>Intelligent Systems</span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">FONT</span>&gt;</span><span>
+<span id="line54"></span>			    </span><span class="comment">&lt;!--Research Field 3: Contributions--&gt;</span><span>
+<span id="line55"></span>			    </span><span>&lt;<span class="start-tag">UL</span>&gt;</span><span>
+<span id="line56"></span>				    </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/research.html#HAMP-BAU">research.html#HAMP-BAU</a>"&gt;</span><span>Autonomous and Integrated System for Mobile Pick-and-Place Tasks in Unknown Environments.</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span>
+<span id="line57"></span>				</span><span>&lt;/<span class="end-tag">UL</span>&gt;</span><span>
+<span id="line58"></span>				
+<span id="line59"></span>			</span><span class="comment">&lt;!--Some blank lines (space) before horizontal line--&gt;</span><span>
+<span id="line60"></span>			</span><span>&lt;<span class="start-tag">BR</span>&gt;</span><span></span><span>&lt;<span class="start-tag">BR</span>&gt;</span><span></span><span>&lt;<span class="start-tag">P</span>&gt;</span><span></span><span>&lt;<span class="start-tag">HR</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">noshade</span>&gt;</span><span>
+<span id="line61"></span>	        </span><span>&lt;<span class="start-tag">FONT</span> <span class="attribute-name">SIZE</span>="<a class="attribute-value">+1</a>"&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span> <span class="attribute-name">id</span>="<a class="attribute-value">HAMP</a>"&gt;</span><span>A Hierarchical and Adaptive Mobile Manipulator Planner (HAMP)</span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">FONT</span>&gt;</span><span>
+<span id="line62"></span>            </span><span>&lt;<span class="start-tag">HR</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">noshade</span>&gt;</span><span>
+<span id="line63"></span>			
+<span id="line64"></span>			</span><span class="comment">&lt;!--Research Field 1: Contribution 1: Detailed Explanation and videos--&gt;</span><span>
+<span id="line65"></span>			</span><span>&lt;<span class="start-tag">P</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">justifytext</a>"&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span>&gt;</span><span>Abstract:-</span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span> We present a Hierarchical and Adaptive Mobile Manipulator Planner (HAMP) that plans for both the base and 
+<span id="line66"></span>			the arm in a judicious manner - allowing the manipulator to change its configuration autonomously when needed if the current arm 
+<span id="line67"></span>			configuration is in collision with the environment as the mobile manipulator moves along the planned path. This is in contrast to 
+<span id="line68"></span>			current implemented approaches that are conservative and fold the arm into a fixed home configuration. Our planner first constructs 
+<span id="line69"></span>			a base roadmap and then for each node in the roadmap it checks for collision status of current manipulator configuration along the 
+<span id="line70"></span>			edges formed with adjacent nodes, if the current manipulator configuration is in collision, the manipulator C-space is searched for 
+<span id="line71"></span>			a new reachable configuration such that it is collision-free as the mobile manipulator moves along the edge. We show that HAMP is 
+<span id="line72"></span>			probabilistically complete. We compared HAMP with full 9D PRM and observed that HAMP outperforms the full 9D PRM in each of the 
+<span id="line73"></span>			performance criteria, i.e., computational time, percentage of successful attempts, base path length, and most importantly, undesired 
+<span id="line74"></span>			motions of the arm.
+<span id="line75"></span>			
+<span id="line76"></span>			</span><span>&lt;<span class="start-tag">P</span>&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span>&gt;</span><span>Read More:- </span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span>
+<span id="line77"></span>				</span><span>&lt;<span class="start-tag">UL</span>&gt;</span><span>
+<span id="line78"></span>				    </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>Vinay Pilania and Kamal Gupta, "A Hierarchical and Adaptive Mobile Manipulator Planner", </span><span>&lt;<span class="start-tag">i</span>&gt;</span><span>IEEE-RAS International 
+<span id="line79"></span>					Conference on Humanoid Robots (Humanoids)</span><span>&lt;/<span class="end-tag">i</span>&gt;</span><span>, Madrid, November 2014, pp. 45-51. </span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">file</a>" <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/PdfFiles/PilaniaAndGuptaHumanoids-14.pdf">PdfFiles/PilaniaAndGuptaHumanoids-14.pdf</a>"&gt;</span><span>[PDF]</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span> 
+<span id="line80"></span>					</span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">file</a>" <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7041336">http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7041336</a>"&gt;</span><span>[IEEE Xplore Link]</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span>
+<span id="line81"></span>				</span><span>&lt;/<span class="end-tag">UL</span>&gt;</span><span>
+<span id="line82"></span>			
+<span id="line83"></span>			</span><span class="comment">&lt;!--*****************************************************************--&gt;</span><span>
+<span id="line84"></span>			</span><span class="comment">&lt;!--************************Video Adding Starts Here*****************--&gt;</span><span>
+<span id="line85"></span>			</span><span class="comment">&lt;!--*****************************************************************--&gt;</span><span>
+<span id="line86"></span>			</span><span>&lt;<span class="start-tag">H4</span>&gt;</span><span>Simulation videos corresponding to scenarios B <span><span>&amp;</span></span> C</span><span>&lt;/<span class="end-tag">H4</span>&gt;</span><span>
+<span id="line87"></span>			</span><span class="comment">&lt;!--Simulation videos corresponding to scenarios B &amp; C--&gt;</span><span>
+<span id="line88"></span>			</span><span>&lt;<span class="start-tag">TABLE</span> <span class="attribute-name">BORDER</span>=<a class="attribute-value">0</a> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">CELLPADDING</span>="<a class="attribute-value">0</a>" <span class="attribute-name">CELLSPACING</span>="<a class="attribute-value">0</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>"&gt;</span><span>
+<span id="line89"></span>			    </span><span>&lt;<span class="start-tag">TR</span>&gt;</span><span>
+<span id="line90"></span>                    </span><span>&lt;<span class="start-tag">TD</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">40%</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>"&gt;</span><span> 
+<span id="line91"></span>                        </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">id</span>="<a class="attribute-value">player1</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:http://www.macromedia.com/go/getflashplayer">http://www.macromedia.com/go/getflashplayer</a>"&gt;</span><span>Get the Flash Player</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> to see this player.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line92"></span>                        </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>"&gt;</span><span>
+<span id="line93"></span>        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
+<span id="line94"></span>        	                s1.addParam("allowfullscreen","true");
+<span id="line95"></span>        	                s1.addVariable("file","videos/hamp_exp2.flv");
+<span id="line96"></span>        	                s1.addVariable("image","videos/hamp_exp2.png");
+<span id="line97"></span>        	                s1.write("player1");
+<span id="line98"></span>                        </span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>    
+<span id="line99"></span>                    </span><span>&lt;/<span class="end-tag">TD</span>&gt;</span><span>
+<span id="line100"></span>                    </span><span>&lt;<span class="start-tag">TD</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">40%</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>"&gt;</span><span> 
+<span id="line101"></span>                        </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">id</span>="<a class="attribute-value">player2</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:http://www.macromedia.com/go/getflashplayer">http://www.macromedia.com/go/getflashplayer</a>"&gt;</span><span>Get the Flash Player</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> to see this player.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line102"></span>                        </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>"&gt;</span><span>
+<span id="line103"></span>        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
+<span id="line104"></span>        	                s1.addParam("allowfullscreen","true");
+<span id="line105"></span>        	                s1.addVariable("file","videos/hamp_exp3.flv");
+<span id="line106"></span>        	                s1.addVariable("image","videos/hamp_exp3.png");
+<span id="line107"></span>        	                s1.write("player2");
+<span id="line108"></span>                        </span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>    
+<span id="line109"></span>                    </span><span>&lt;/<span class="end-tag">TD</span>&gt;</span><span>
+<span id="line110"></span>                </span><span>&lt;/<span class="end-tag">TR</span>&gt;</span><span>
+<span id="line111"></span>            </span><span>&lt;/<span class="end-tag">TABLE</span>&gt;</span><span>
+<span id="line112"></span>			
+<span id="line113"></span>			</span><span>&lt;<span class="start-tag">H4</span>&gt;</span><span>Simulation videos corresponding to scenarios D <span><span>&amp;</span></span> E</span><span>&lt;/<span class="end-tag">H4</span>&gt;</span><span>
+<span id="line114"></span>			</span><span class="comment">&lt;!--Simulation videos corresponding to scenarios D &amp; E--&gt;</span><span>
+<span id="line115"></span>			</span><span>&lt;<span class="start-tag">TABLE</span> <span class="attribute-name">BORDER</span>=<a class="attribute-value">0</a> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">CELLPADDING</span>="<a class="attribute-value">0</a>" <span class="attribute-name">CELLSPACING</span>="<a class="attribute-value">0</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>"&gt;</span><span>
+<span id="line116"></span>			    </span><span>&lt;<span class="start-tag">TR</span>&gt;</span><span>
+<span id="line117"></span>                    </span><span>&lt;<span class="start-tag">TD</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">40%</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>"&gt;</span><span> 
+<span id="line118"></span>                        </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">id</span>="<a class="attribute-value">player3</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:http://www.macromedia.com/go/getflashplayer">http://www.macromedia.com/go/getflashplayer</a>"&gt;</span><span>Get the Flash Player</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> to see this player.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line119"></span>                        </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>"&gt;</span><span>
+<span id="line120"></span>        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
+<span id="line121"></span>        	                s1.addParam("allowfullscreen","true");
+<span id="line122"></span>        	                s1.addVariable("file","videos/hamp_exp4.flv");
+<span id="line123"></span>        	                s1.addVariable("image","videos/hamp_exp4.png");
+<span id="line124"></span>        	                s1.write("player3");
+<span id="line125"></span>                        </span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>    
+<span id="line126"></span>                    </span><span>&lt;/<span class="end-tag">TD</span>&gt;</span><span>
+<span id="line127"></span>                    </span><span>&lt;<span class="start-tag">TD</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">40%</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>"&gt;</span><span> 
+<span id="line128"></span>                        </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">id</span>="<a class="attribute-value">player4</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:http://www.macromedia.com/go/getflashplayer">http://www.macromedia.com/go/getflashplayer</a>"&gt;</span><span>Get the Flash Player</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> to see this player.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line129"></span>                        </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>"&gt;</span><span>
+<span id="line130"></span>        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
+<span id="line131"></span>        	                s1.addParam("allowfullscreen","true");
+<span id="line132"></span>        	                s1.addVariable("file","videos/hamp_exp5.flv");
+<span id="line133"></span>        	                s1.addVariable("image","videos/hamp_exp5.png");
+<span id="line134"></span>        	                s1.write("player4");
+<span id="line135"></span>                        </span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>    
+<span id="line136"></span>                    </span><span>&lt;/<span class="end-tag">TD</span>&gt;</span><span>
+<span id="line137"></span>                </span><span>&lt;/<span class="end-tag">TR</span>&gt;</span><span>
+<span id="line138"></span>            </span><span>&lt;/<span class="end-tag">TABLE</span>&gt;</span><span>
+<span id="line139"></span>			</span><span class="comment">&lt;!--*****************************************************************--&gt;</span><span>
+<span id="line140"></span>			</span><span class="comment">&lt;!--************************Video Adding Ends Here*******************--&gt;</span><span>
+<span id="line141"></span>			</span><span class="comment">&lt;!--*****************************************************************--&gt;</span><span>
+<span id="line142"></span>			
+<span id="line143"></span>			
+<span id="line144"></span>			</span><span class="comment">&lt;!--*****************************************************************--&gt;</span><span>
+<span id="line145"></span>			</span><span class="comment">&lt;!--Research Field 1: Contribution 2: Detailed Explanation and videos--&gt;</span><span>
+<span id="line146"></span>			</span><span class="comment">&lt;!--*******************Put the next one below************************--&gt;</span><span>
+<span id="line147"></span>			</span><span class="comment">&lt;!--*****************************************************************--&gt;</span><span>
+<span id="line148"></span>						
+<span id="line149"></span>			
+<span id="line150"></span>			</span><span class="comment">&lt;!--Research Field 2: Contribution 1: Detailed Explanation and videos--&gt;</span><span>
+<span id="line151"></span>			</span><span class="comment">&lt;!--Some blank lines (space) before horizontal line--&gt;</span><span>
+<span id="line152"></span>			</span><span>&lt;<span class="start-tag">P</span>&gt;</span><span></span><span>&lt;<span class="start-tag">BR</span>&gt;</span><span></span><span>&lt;<span class="start-tag">HR</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">noshade</span>&gt;</span><span>
+<span id="line153"></span>			</span><span>&lt;<span class="start-tag">FONT</span> <span class="attribute-name">SIZE</span>="<a class="attribute-value">+1</a>"&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span> <span class="attribute-name">id</span>="<a class="attribute-value">HAMP-U</a>"&gt;</span><span>A Hierarchical and Adaptive Mobile Manipulator Planner with Base Pose Uncertainty (HAMP-U)</span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">FONT</span>&gt;</span><span>
+<span id="line154"></span>            </span><span>&lt;<span class="start-tag">HR</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">noshade</span>&gt;</span><span>
+<span id="line155"></span>			</span><span class="comment">&lt;!--************************Put it below*****************************--&gt;</span><span>
+<span id="line156"></span>			</span><span>&lt;<span class="start-tag">P</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">justifytext</a>"&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span>&gt;</span><span>Abstract:-</span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span> We present a Hierarchical and Adaptive Mobile Manipulator Planner (HAMP) that plans for both the base 
+<span id="line157"></span>			and the arm in a judicious manner - allowing the manipulator to change its configuration autonomously when needed if the current 
+<span id="line158"></span>			arm configuration is in collision with the environment as the mobile manipulator moves along the planned path. This is in contrast 
+<span id="line159"></span>			to current implemented approaches that are conservative and fold the arm into a fixed home configuration. Our planner first constructs 
+<span id="line160"></span>			a base roadmap and then for each node in the roadmap it checks for collision status of current manipulator configuration along the edges 
+<span id="line161"></span>			formed with adjacent nodes, if the current manipulator configuration is in collision, the manipulator C-space is searched for a new 
+<span id="line162"></span>			reachable configuration such that it is collision-free as the mobile manipulator moves along the edge and a path from current configuration 
+<span id="line163"></span>			to the new reachable configuration is computed. We show that HAMP is probabilistically complete. We compared HAMP with full 9D PRM and 
+<span id="line164"></span>			observed that the full 9D PRM is outperformed by HAMP in each of the performance criteria, i.e., computational time, percentage of 
+<span id="line165"></span>			successful attempts, base path length, and most importantly, undesired motions of the arm. We also evaluated the tree versions of HAMP, 
+<span id="line166"></span>			with RRT and Bi-directional RRT as core underlying sub-planners, and observed similar advantages, although the time saving  for 
+<span id="line167"></span>			Bi-directional RRT version is modest. We then present an extension of HAMP (we call it HAMP-U) that uses belief space planning 
+<span id="line168"></span>			to account for localization uncertainty associated with the mobile base position and ensures that the resultant path for the mobile 
+<span id="line169"></span>			manipulator has low uncertainty at the goal. Our  experimental results show that the paths generated by HAMP-U are less likely to 
+<span id="line170"></span>			result in collision and are safer to execute than those generated by HAMP (without incorporating uncertainty), thereby showing the 
+<span id="line171"></span>			importance of incorporating base pose uncertainty in our overall HAMP algorithm.
+<span id="line172"></span>			
+<span id="line173"></span>			</span><span>&lt;<span class="start-tag">P</span>&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span>&gt;</span><span>Read More:- </span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span>
+<span id="line174"></span>				</span><span>&lt;<span class="start-tag">UL</span>&gt;</span><span>
+<span id="line175"></span>				    </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>Vinay Pilania and Kamal Gupta, "A Hierarchical and Adaptive Mobile Manipulator Planner with Base Pose Uncertainty", 
+<span id="line176"></span>					</span><span>&lt;<span class="start-tag">i</span>&gt;</span><span>Autonomous Robots</span><span>&lt;/<span class="end-tag">i</span>&gt;</span><span>, Volume 39, Issue 1, June 2015, pp. 65-85. </span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">file</a>" <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/PdfFiles/PilaniaAndGuptaAURO-14.pdf">PdfFiles/PilaniaAndGuptaAURO-14.pdf</a>"&gt;</span><span>[PDF]</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span>
+<span id="line177"></span>					</span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">file</a>" <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://link.springer.com/article/10.1007/s10514-015-9427-2">http://link.springer.com/article/10.1007/s10514-015-9427-2</a>"&gt;</span><span>[Springer Link]</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span>
+<span id="line178"></span>				</span><span>&lt;/<span class="end-tag">UL</span>&gt;</span><span>
+<span id="line179"></span>
+<span id="line180"></span>			
+<span id="line181"></span>			</span><span class="comment">&lt;!--*****************************************************************--&gt;</span><span>
+<span id="line182"></span>			</span><span class="comment">&lt;!--************************Video Adding Starts Here*****************--&gt;</span><span>
+<span id="line183"></span>			</span><span class="comment">&lt;!--*****************************************************************--&gt;</span><span>
+<span id="line184"></span>			</span><span>&lt;<span class="start-tag">H4</span>&gt;</span><span>Real experiment on SFU Mobile Manipulator (left one)</span><span>&lt;/<span class="end-tag">H4</span>&gt;</span><span>
+<span id="line185"></span>			</span><span class="comment">&lt;!--Real experiment on SFU Mobile Manipulator--&gt;</span><span>
+<span id="line186"></span>			</span><span>&lt;<span class="start-tag">TABLE</span> <span class="attribute-name">BORDER</span>=<a class="attribute-value">0</a> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">CELLPADDING</span>="<a class="attribute-value">0</a>" <span class="attribute-name">CELLSPACING</span>="<a class="attribute-value">0</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>"&gt;</span><span>
+<span id="line187"></span>			    </span><span>&lt;<span class="start-tag">TR</span>&gt;</span><span>
+<span id="line188"></span>                    </span><span>&lt;<span class="start-tag">TD</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">40%</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>"&gt;</span><span> 
+<span id="line189"></span>                        </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">id</span>="<a class="attribute-value">player5</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:http://www.macromedia.com/go/getflashplayer">http://www.macromedia.com/go/getflashplayer</a>"&gt;</span><span>Get the Flash Player</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> to see this player.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line190"></span>                        </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>"&gt;</span><span>
+<span id="line191"></span>        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
+<span id="line192"></span>        	                s1.addParam("allowfullscreen","true");
+<span id="line193"></span>        	                s1.addVariable("file","videos/hamp_real_exp.flv");
+<span id="line194"></span>        	                s1.addVariable("image","videos/hamp_real_exp.png");
+<span id="line195"></span>        	                s1.write("player5");
+<span id="line196"></span>                        </span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>    
+<span id="line197"></span>                    </span><span>&lt;/<span class="end-tag">TD</span>&gt;</span><span>
+<span id="line198"></span>                    </span><span>&lt;<span class="start-tag">TD</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">40%</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>"&gt;</span><span> 
+<span id="line199"></span>                        </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">id</span>="<a class="attribute-value">player6</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:http://www.macromedia.com/go/getflashplayer">http://www.macromedia.com/go/getflashplayer</a>"&gt;</span><span>Get the Flash Player</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> to see this player.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line200"></span>                        </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>"&gt;</span><span>
+<span id="line201"></span>        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
+<span id="line202"></span>        	                s1.addParam("allowfullscreen","true");
+<span id="line203"></span>        	                s1.addVariable("file","videos/hamp_exp2_gazebo.flv");
+<span id="line204"></span>        	                s1.addVariable("image","videos/hamp_exp2_gazebo.png");
+<span id="line205"></span>        	                s1.write("player6");
+<span id="line206"></span>                        </span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>    
+<span id="line207"></span>                    </span><span>&lt;/<span class="end-tag">TD</span>&gt;</span><span>
+<span id="line208"></span>                </span><span>&lt;/<span class="end-tag">TR</span>&gt;</span><span>
+<span id="line209"></span>            </span><span>&lt;/<span class="end-tag">TABLE</span>&gt;</span><span>
+<span id="line210"></span>			</span><span class="comment">&lt;!--*****************************************************************--&gt;</span><span>
+<span id="line211"></span>			</span><span class="comment">&lt;!--************************Video Adding Ends Here*******************--&gt;</span><span>
+<span id="line212"></span>			</span><span class="comment">&lt;!--*****************************************************************--&gt;</span><span>
+<span id="line213"></span>			
+<span id="line214"></span>			
+<span id="line215"></span>			</span><span class="comment">&lt;!--Research Field 2: Contribution 2: Detailed Explanation and photos--&gt;</span><span>
+<span id="line216"></span>			</span><span class="comment">&lt;!--Some blank lines (space) before horizontal line--&gt;</span><span>
+<span id="line217"></span>			</span><span>&lt;<span class="start-tag">P</span>&gt;</span><span></span><span>&lt;<span class="start-tag">BR</span>&gt;</span><span></span><span>&lt;<span class="start-tag">HR</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">noshade</span>&gt;</span><span>
+<span id="line218"></span>			</span><span>&lt;<span class="start-tag">FONT</span> <span class="attribute-name">SIZE</span>="<a class="attribute-value">+1</a>"&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span> <span class="attribute-name">id</span>="<a class="attribute-value">LAS</a>"&gt;</span><span>A Localization Aware Sampling Strategy for Motion Planning under Uncertainty (LAS)</span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">FONT</span>&gt;</span><span>
+<span id="line219"></span>            </span><span>&lt;<span class="start-tag">HR</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">noshade</span>&gt;</span><span>
+<span id="line220"></span>			</span><span class="comment">&lt;!--************************Put it below*****************************--&gt;</span><span>
+<span id="line221"></span>			</span><span>&lt;<span class="start-tag">P</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">justifytext</a>"&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span>&gt;</span><span>Abstract:-</span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span> We present a localization aware efficient sampling strategy for sampling-based motion 
+<span id="line222"></span>			planning under uncertainty that uses a new notion of localization ability of a sample. It puts more samples in regions where sensor 
+<span id="line223"></span>			data is able to achieve higher uncertainty reduction while maintaining adequate samples in regions where uncertainty reduction is 
+<span id="line224"></span>			poor. This leads to a less dense roadmap and hence results in significant time savings in the path search phase. We provide simulation 
+<span id="line225"></span>			results that show stochastic planners with our sampling strategy place less samples and find a well-localized path in shorter time with 
+<span id="line226"></span>			little compromise on the quality of path as compared to existing sampling techniques. We also show that a stochastic planner that uses 
+<span id="line227"></span>			our sampling strategy is probabilistically complete under some reasonable conditions on parameters.
+<span id="line228"></span>
+<span id="line229"></span>			</span><span>&lt;<span class="start-tag">P</span>&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span>&gt;</span><span>Read More:- </span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span>
+<span id="line230"></span>				</span><span>&lt;<span class="start-tag">UL</span>&gt;</span><span>
+<span id="line231"></span>				    </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>Vinay Pilania and Kamal Gupta, "A Localization Aware Sampling Strategy for Motion Planning under Uncertainty", 
+<span id="line232"></span>					</span><span>&lt;<span class="start-tag">i</span>&gt;</span><span>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</span><span>&lt;/<span class="end-tag">i</span>&gt;</span><span>, Hamburg, September 2015, pp. 6093-6099. 
+<span id="line233"></span>					</span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">file</a>" <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/PdfFiles/IROS-15.pdf">PdfFiles/IROS-15.pdf</a>"&gt;</span><span>[PDF]</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span> 
+<span id="line234"></span>					</span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">file</a>" <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7354245">http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7354245</a>"&gt;</span><span>[IEEE Xplore Link]</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span>
+<span id="line235"></span>				</span><span>&lt;/<span class="end-tag">UL</span>&gt;</span><span>
+<span id="line236"></span>				
+<span id="line237"></span>			
+<span id="line238"></span>			</span><span class="comment">&lt;!--Research Field 2: Contribution 3: Detailed Explanation and photos--&gt;</span><span>
+<span id="line239"></span>			</span><span class="comment">&lt;!--Some blank lines (space) before horizontal line--&gt;</span><span>
+<span id="line240"></span>			</span><span>&lt;<span class="start-tag">P</span>&gt;</span><span></span><span>&lt;<span class="start-tag">BR</span>&gt;</span><span></span><span>&lt;<span class="start-tag">HR</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">noshade</span>&gt;</span><span>
+<span id="line241"></span>			</span><span>&lt;<span class="start-tag">FONT</span> <span class="attribute-name">SIZE</span>="<a class="attribute-value">+1</a>"&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span> <span class="attribute-name">id</span>="<a class="attribute-value">LASandLAC</a>"&gt;</span><span>Localization Aware Sampling and Connection Strategies for Incremental Motion Planning under Uncertainty</span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">FONT</span>&gt;</span><span>
+<span id="line242"></span>            </span><span>&lt;<span class="start-tag">HR</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">noshade</span>&gt;</span><span>
+<span id="line243"></span>			</span><span class="comment">&lt;!--************************Put it below*****************************--&gt;</span><span>
+<span id="line244"></span>			</span><span>&lt;<span class="start-tag">P</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">justifytext</a>"&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span>&gt;</span><span>Abstract:-</span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span> We present efficient localization aware sampling and connection strategies for incremental 
+<span id="line245"></span>			sampling-based stochastic motion planners. For sampling, we introduce a new measure of localization ability of a sample, one that is 
+<span id="line246"></span>			independent of the path taken to reach the sample and depends only on the sensor measurement at the sample. Using this measure, our 
+<span id="line247"></span>			sampling strategy puts more samples in regions where sensor data is able to achieve higher uncertainty reduction while maintaining 
+<span id="line248"></span>			adequate samples in regions where uncertainty reduction is poor. This leads to a less dense roadmap and hence results in significant 
+<span id="line249"></span>			time savings. We also show that a stochastic planner that uses our sampling strategy is probabilistically complete under some reasonable 
+<span id="line250"></span>			conditions on parameters. We then present a localization aware efficient connection strategy that uses an uncertainty aware approach in 
+<span id="line251"></span>			connecting the new sample to the neighbouring nodes, i.e., it uses an uncertainty measure (as opposed to distance) to connect the new 
+<span id="line252"></span>			sample to a neighbouring node so that the new sample is reachable with least uncertainty ("the closest"), and furthermore, connections 
+<span id="line253"></span>			to other neighbouring nodes are made only if the new path to them (via the new sample) helps to reduce the uncertainty at those nodes. 
+<span id="line254"></span>			This is in contrast to current incremental stochastic motion planners that simply connect the new sample to all of the neighbouring nodes 
+<span id="line255"></span>			and therefore, take more search queue iterations to update the paths (i.e., uncertainty propagation). Hence, our efficient connection 
+<span id="line256"></span>			strategy, in addition to eliminating the inefficient edges that do not contribute to better localization, also reduces the number of 
+<span id="line257"></span>			search queue iterations. We provide simulation results that show that a) our localization aware sampling strategy places less samples 
+<span id="line258"></span>			and find a well-localized path in shorter time with little compromise on the quality of path as compared to existing sampling techniques, 
+<span id="line259"></span>			b) our localization aware connection strategy finds a well-localized path in shorter time with no compromise on the quality of path as 
+<span id="line260"></span>			compared to existing connection techniques, and finally c) combined use of our sampling and connection strategies further reduces the 
+<span id="line261"></span>			planner run time.
+<span id="line262"></span>			
+<span id="line263"></span>			</span><span>&lt;<span class="start-tag">P</span>&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span>&gt;</span><span>Read More:- </span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span>
+<span id="line264"></span>				</span><span>&lt;<span class="start-tag">UL</span>&gt;</span><span>
+<span id="line265"></span>				    </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>Vinay Pilania and Kamal Gupta, "Localization Aware Sampling and Connection Strategies for Incremental Motion Planning under Uncertainty", 
+<span id="line266"></span>					</span><span>&lt;<span class="start-tag">i</span>&gt;</span><span>Autonomous Robots (accepted on Dec 10, 2015)</span><span>&lt;/<span class="end-tag">i</span>&gt;</span><span>. </span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">file</a>" <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://www-personal.umich.edu/~vpilania/PdfFiles/AURO-15.pdf">PdfFiles/AURO-15.pdf</a>"&gt;</span><span>[PDF]</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span>
+<span id="line267"></span>					</span><span>&lt;<span class="start-tag">A</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">file</a>" <span class="attribute-name">HREF</span>="<a class="attribute-value" href="view-source:http://link.springer.com/article/10.1007/s10514-015-9536-y">http://link.springer.com/article/10.1007/s10514-015-9536-y</a>"&gt;</span><span>[Springer Link]</span><span>&lt;/<span class="end-tag">A</span>&gt;</span><span>
+<span id="line268"></span>				</span><span>&lt;/<span class="end-tag">UL</span>&gt;</span><span>
+<span id="line269"></span>				
+<span id="line270"></span>			
+<span id="line271"></span>			</span><span class="comment">&lt;!--Research Field 2: Contribution 4: Detailed Explanation and photos--&gt;</span><span>
+<span id="line272"></span>			</span><span class="comment">&lt;!--Some blank lines (space) before horizontal line--&gt;</span><span>
+<span id="line273"></span>			</span><span>&lt;<span class="start-tag">P</span>&gt;</span><span></span><span>&lt;<span class="start-tag">BR</span>&gt;</span><span></span><span>&lt;<span class="start-tag">HR</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">noshade</span>&gt;</span><span>
+<span id="line274"></span>			</span><span>&lt;<span class="start-tag">FONT</span> <span class="attribute-name">SIZE</span>="<a class="attribute-value">+1</a>"&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span> <span class="attribute-name">id</span>="<a class="attribute-value">HAMP-BAU</a>"&gt;</span><span>Mobile Manipulator Planning under Uncertainty in Unknown Environments (HAMP-BUA and HAMP-BUA-TC)</span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">FONT</span>&gt;</span><span>
+<span id="line275"></span>            </span><span>&lt;<span class="start-tag">HR</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">noshade</span>&gt;</span><span>
+<span id="line276"></span>			</span><span class="comment">&lt;!--************************Put it below*****************************--&gt;</span><span>
+<span id="line277"></span>			</span><span>&lt;<span class="start-tag">P</span> <span class="attribute-name">CLASS</span>="<a class="attribute-value">justifytext</a>"&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span>&gt;</span><span>Abstract:-</span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span> We present a sampling-based mobile manipulator planner that considers the base pose uncertainty and the effects of this uncertainty on manipulator motions. The overall planner has three distinct and novel features: i) it uses the Hierarchical and Adaptive Mobile Manipulator Planner (HAMP) that plans for both the base and the arm in a judicious manner, ii) it uses localization aware sampling and connection strategies to consider only those nodes and edges which contribute toward better localization, iii) it incorporates base pose uncertainty along the edges (where arm remains static) and the effects of this uncertainty are considered on arm motion. We call this overall planner HAMP-BUA, where BUA stands for Base pose Uncertainty and its propagation to Arm motions. First we evaluate our planner in known static environments and show that it finds a safer path as compared to other variants where uncertainty is not considered at different levels as mentioned above. Next, we incorporate our planner within an integrated and fully autonomous system for mobile pick-and-place tasks in unknown static environments. A key aspect of our integrated system is that the planner works in tandem with base and arm exploration modules that explore the unknown environment. Our system is implemented both in simulation and on the actual SFU mobile manipulator and we present the corresponding results. It demonstrates a level of competency in exploring unknown environments for carrying out pick-and-place tasks that has not been demonstrated before.
+<span id="line278"></span>
+<span id="line279"></span>			
+<span id="line280"></span>			</span><span>&lt;<span class="start-tag">P</span>&gt;</span><span> </span><span>&lt;<span class="start-tag">B</span>&gt;</span><span>Read More:- </span><span>&lt;/<span class="end-tag">B</span>&gt;</span><span>
+<span id="line281"></span>				</span><span>&lt;<span class="start-tag">UL</span>&gt;</span><span>
+<span id="line282"></span>				    </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>Vinay Pilania and Kamal Gupta, "Mobile Manipulator Planning under Uncertainty in Unknown Environments", 
+<span id="line283"></span>					</span><span>&lt;<span class="start-tag">i</span>&gt;</span><span>submitted to IJRR (under review)</span><span>&lt;/<span class="end-tag">i</span>&gt;</span><span>.
+<span id="line284"></span>				</span><span>&lt;/<span class="end-tag">UL</span>&gt;</span><span>
+<span id="line285"></span>			
+<span id="line286"></span>			</span><span class="comment">&lt;!--*****************************************************************--&gt;</span><span>
+<span id="line287"></span>			</span><span class="comment">&lt;!--************************Video Adding Starts Here*****************--&gt;</span><span>
+<span id="line288"></span>			</span><span class="comment">&lt;!--*****************************************************************--&gt;</span><span>
+<span id="line289"></span>			</span><span>&lt;<span class="start-tag">H4</span>&gt;</span><span>Real Experiments: [left] HAMP-BUA in unknown environment, [right] HAMP-BUA-TC in known environment</span><span>&lt;/<span class="end-tag">H4</span>&gt;</span><span>
+<span id="line290"></span>			</span><span class="comment">&lt;!--Real experiment on SFU Mobile Manipulator--&gt;</span><span>
+<span id="line291"></span>			</span><span>&lt;<span class="start-tag">TABLE</span> <span class="attribute-name">BORDER</span>=<a class="attribute-value">0</a> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">CELLPADDING</span>="<a class="attribute-value">0</a>" <span class="attribute-name">CELLSPACING</span>="<a class="attribute-value">0</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>"&gt;</span><span>
+<span id="line292"></span>			    </span><span>&lt;<span class="start-tag">TR</span>&gt;</span><span>
+<span id="line293"></span>                    </span><span>&lt;<span class="start-tag">TD</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">40%</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>"&gt;</span><span> 
+<span id="line294"></span>                        </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">id</span>="<a class="attribute-value">player7</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:http://www.macromedia.com/go/getflashplayer">http://www.macromedia.com/go/getflashplayer</a>"&gt;</span><span>Get the Flash Player</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> to see this player.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line295"></span>                        </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>"&gt;</span><span>
+<span id="line296"></span>        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
+<span id="line297"></span>        	                s1.addParam("allowfullscreen","true");
+<span id="line298"></span>        	                s1.addVariable("file","videos/hamp_bau_3.flv");
+<span id="line299"></span>        	                s1.addVariable("image","videos/hamp_bau_3.png");
+<span id="line300"></span>        	                s1.write("player7");
+<span id="line301"></span>                        </span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>    
+<span id="line302"></span>                    </span><span>&lt;/<span class="end-tag">TD</span>&gt;</span><span>
+<span id="line303"></span>                    </span><span>&lt;<span class="start-tag">TD</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">40%</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>"&gt;</span><span> 
+<span id="line304"></span>                        </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">id</span>="<a class="attribute-value">player8</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:http://www.macromedia.com/go/getflashplayer">http://www.macromedia.com/go/getflashplayer</a>"&gt;</span><span>Get the Flash Player</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> to see this player.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line305"></span>                        </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>"&gt;</span><span>
+<span id="line306"></span>        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
+<span id="line307"></span>        	                s1.addParam("allowfullscreen","true");
+<span id="line308"></span>        	                s1.addVariable("file","videos/hamp_bau_4.flv");
+<span id="line309"></span>        	                s1.addVariable("image","videos/hamp_bau_4.png");
+<span id="line310"></span>        	                s1.write("player8");
+<span id="line311"></span>                        </span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>    
+<span id="line312"></span>                    </span><span>&lt;/<span class="end-tag">TD</span>&gt;</span><span>
+<span id="line313"></span>                </span><span>&lt;/<span class="end-tag">TR</span>&gt;</span><span>
+<span id="line314"></span>            </span><span>&lt;/<span class="end-tag">TABLE</span>&gt;</span><span>
+<span id="line315"></span>			
+<span id="line316"></span>			</span><span>&lt;<span class="start-tag">H4</span>&gt;</span><span>Simulations: [left] HAMP-BUA in unknown environment, [right] HAMP-BUA-TC in known environment</span><span>&lt;/<span class="end-tag">H4</span>&gt;</span><span>
+<span id="line317"></span>			</span><span class="comment">&lt;!--Real experiment on SFU Mobile Manipulator--&gt;</span><span>
+<span id="line318"></span>			</span><span>&lt;<span class="start-tag">TABLE</span> <span class="attribute-name">BORDER</span>=<a class="attribute-value">0</a> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">CELLPADDING</span>="<a class="attribute-value">0</a>" <span class="attribute-name">CELLSPACING</span>="<a class="attribute-value">0</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>"&gt;</span><span>
+<span id="line319"></span>			    </span><span>&lt;<span class="start-tag">TR</span>&gt;</span><span>
+<span id="line320"></span>                    </span><span>&lt;<span class="start-tag">TD</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">40%</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>"&gt;</span><span> 
+<span id="line321"></span>                        </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">id</span>="<a class="attribute-value">player9</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:http://www.macromedia.com/go/getflashplayer">http://www.macromedia.com/go/getflashplayer</a>"&gt;</span><span>Get the Flash Player</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> to see this player.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line322"></span>                        </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>"&gt;</span><span>
+<span id="line323"></span>        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
+<span id="line324"></span>        	                s1.addParam("allowfullscreen","true");
+<span id="line325"></span>        	                s1.addVariable("file","videos/hamp_bau_1.flv");
+<span id="line326"></span>        	                s1.addVariable("image","videos/hamp_bau_1.png");
+<span id="line327"></span>        	                s1.write("player9");
+<span id="line328"></span>                        </span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>    
+<span id="line329"></span>                    </span><span>&lt;/<span class="end-tag">TD</span>&gt;</span><span>
+<span id="line330"></span>                    </span><span>&lt;<span class="start-tag">TD</span> <span class="attribute-name">WIDTH</span>="<a class="attribute-value">40%</a>" <span class="attribute-name">ALIGN</span>="<a class="attribute-value">Center</a>"&gt;</span><span> 
+<span id="line331"></span>                        </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">id</span>="<a class="attribute-value">player10</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:http://www.macromedia.com/go/getflashplayer">http://www.macromedia.com/go/getflashplayer</a>"&gt;</span><span>Get the Flash Player</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span> to see this player.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line332"></span>                        </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>"&gt;</span><span>
+<span id="line333"></span>        	                var s1 = new SWFObject("flvplayer.swf","single","318","274","7");
+<span id="line334"></span>        	                s1.addParam("allowfullscreen","true");
+<span id="line335"></span>        	                s1.addVariable("file","videos/hamp_bau_2.flv");
+<span id="line336"></span>        	                s1.addVariable("image","videos/hamp_bau_2.png");
+<span id="line337"></span>        	                s1.write("player10");
+<span id="line338"></span>                        </span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>    
+<span id="line339"></span>                    </span><span>&lt;/<span class="end-tag">TD</span>&gt;</span><span>
+<span id="line340"></span>                </span><span>&lt;/<span class="end-tag">TR</span>&gt;</span><span>
+<span id="line341"></span>            </span><span>&lt;/<span class="end-tag">TABLE</span>&gt;</span><span>
+<span id="line342"></span>			</span><span class="comment">&lt;!--*****************************************************************--&gt;</span><span>
+<span id="line343"></span>			</span><span class="comment">&lt;!--************************Video Adding Ends Here*******************--&gt;</span><span>
+<span id="line344"></span>			</span><span class="comment">&lt;!--*****************************************************************--&gt;</span><span>
+<span id="line345"></span>			
+<span id="line346"></span>		</span><span>&lt;/<span class="end-tag">TD</span>&gt;</span><span>
+<span id="line347"></span>	</span><span>&lt;/<span class="end-tag">TR</span>&gt;</span><span>
+<span id="line348"></span></span><span>&lt;/<span class="end-tag">TABLE</span>&gt;</span><span>
+<span id="line349"></span>
+<span id="line350"></span></span><span>&lt;/<span class="end-tag">BODY</span>&gt;</span><span>
+<span id="line351"></span></span><span>&lt;/<span class="end-tag">HTML</span>&gt;</span><span></span></pre><menu type="context" id="actions"><menuitem id="goToLine" label="Go to Line…" accesskey="L"></menuitem><menuitem id="wrapLongLines" label="Wrap Long Lines" type="checkbox"></menuitem><menuitem id="highlightSyntax" label="Syntax Highlighting" type="checkbox" checked="true"></menuitem></menu></body></html>
