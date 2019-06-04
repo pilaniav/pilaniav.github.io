@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://pilaniav.github.io/</loc>
+  <lastmod>2019-06-04T16:40:37+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://pilaniav.github.io/research.html</loc>
+  <lastmod>2019-06-04T16:40:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pilaniav.github.io/keycontributions.html</loc>
+  <lastmod>2019-06-04T16:40:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pilaniav.github.io/PdfFiles/PilaniaAndGuptaIEEE-RAM-Auto-Syst.pdf</loc>
+  <lastmod>2019-06-04T16:40:37+00:00</lastmod>
+  <priority>0.995</priority>
+</url>
+<url>
+  <loc>https://pilaniav.github.io/PdfFiles/Vinay_Pilania_PhD_thesis_short.pdf</loc>
+  <lastmod>2019-06-04T16:40:37+00:00</lastmod>
+  <priority>0.99</priority>
+</url>
+<url>
+  <loc>https://pilaniav.github.io/PdfFiles/PilaniaNBO2017.pdf</loc>
+  <lastmod>2019-06-04T16:40:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pilaniav.github.io/PdfFiles/PilaniaAndGuptaIJRR2017.pdf</loc>
+  <lastmod>2019-06-04T16:40:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pilaniav.github.io/PdfFiles/AURO-15.pdf</loc>
+  <lastmod>2019-06-04T16:40:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pilaniav.github.io/PdfFiles/IROS-15.pdf</loc>
+  <lastmod>2019-06-04T16:40:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pilaniav.github.io/PdfFiles/PilaniaAndGuptaAURO-14.pdf</loc>
+  <lastmod>2019-06-04T16:40:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pilaniav.github.io/PdfFiles/PilaniaAndGuptaHumanoids-14.pdf</loc>
+  <lastmod>2019-06-04T16:40:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pilaniav.github.io/index.html</loc>
+  <lastmod>2019-06-04T16:40:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
