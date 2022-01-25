@@ -28,52 +28,47 @@
 <!--Table2: This Table contains the rest part of Research page-->
 <TABLE BORDER=0 WIDTH="900" CELLPADDING="10" CELLSPACING="0" ALIGN="Center" >
 	<TR>
-	    <TD WIDTH="100%">
-		    <!--Research Field 1: Autonomous mobile manipulation-->
-			<BR><FONT SIZE="+1" COLOR="#6699FF"> <B>Autonomous Mobile Manipulation</B></FONT>
-			    <!--Research Field 1: Contributions-->
-			    <UL>
-				    <li><A HREF="research.html#HAMP">A Hierarchical and Adaptive Mobile Manipulator Planner (HAMP).</A>
+	  <TD WIDTH="100%">
+		  <!--Research Field 1: Autonomous mobile manipulation-->
+			<BR>
+			<FONT SIZE="+1" COLOR="#6699FF"> <B>Autonomous Mobile Manipulation</B></FONT>
+			  <!--Research Field 1: Contributions-->
+			  <UL>
+				  <li><A HREF="research.html#HAMP">A Hierarchical and Adaptive Mobile Manipulator Planner (HAMP).</A>
 				</UL>
 			<!--Research Field 2: Path planning under uncertainty-->
-			<BR><FONT SIZE="+1" COLOR="#6699FF"> <B>Path Planning under Uncertainty</B></FONT>
-			    <!--Research Field 2: Contributions-->
+			<BR>
+			<FONT SIZE="+1" COLOR="#6699FF"> <B>Path Planning under Uncertainty</B></FONT>
+			  <!--Research Field 2: Contributions-->
 				<UL>
-				    <li><A HREF="research.html#HAMP-U">A Hierarchical and Adaptive Mobile Manipulator Planner with Base Pose Uncertainty (HAMP-U).</A>
-					<li><A HREF="research.html#LAS">A Localization Aware Sampling Strategy for Motion Planning under Uncertainty (LAS).</A>
+				  <li><A HREF="research.html#HAMP-U">A Hierarchical and Adaptive Mobile Manipulator Planner with Base Pose Uncertainty (HAMP-U).</A>
+				  <li><A HREF="research.html#LAS">A Localization Aware Sampling Strategy for Motion Planning under Uncertainty (LAS).</A>
 					<li><A HREF="research.html#LASandLAC">Localization Aware Sampling and Connection Strategies for Incremental Motion Planning under Uncertainty (LAS and LAC).</A>
 					<li><A HREF="research.html#HAMP-BAU">Mobile Manipulator Planning under Uncertainty in Unknown Environments (HAMP-BUA and HAMP-BUA-TC).</A>
 				</UL>
 			<!--Research Field 3: Autonomous Systems-->
-			<BR><FONT SIZE="+1" COLOR="#6699FF"> <B>Intelligent Systems</B></FONT>
-			    <!--Research Field 3: Contributions-->
-			    <UL>
-				    <li><A HREF="research.html#HAMP-BAU">Autonomous and Integrated System for Mobile Pick-and-Place Tasks in Unknown Environments.</A>
+			<BR>
+			<FONT SIZE="+1" COLOR="#6699FF"> <B>Intelligent Systems</B></FONT>
+			  <!--Research Field 3: Contributions-->
+			  <UL>
+				  <li><A HREF="research.html#HAMP-BAU">Autonomous and Integrated System for Mobile Pick-and-Place Tasks in Unknown Environments.</A>
 				</UL>
 				
 			<!--Some blank lines (space) before horizontal line-->
-			<BR><BR><P><HR WIDTH="100%" noshade>
-	        <FONT SIZE="+1"> <B id="HAMP">A Hierarchical and Adaptive Mobile Manipulator Planner (HAMP)</B></FONT>
-            <HR WIDTH="100%" noshade>
+			<BR><BR><P>
+			<HR WIDTH="100%" noshade>
+	      <FONT SIZE="+1"> <B id="HAMP">A Hierarchical and Adaptive Mobile Manipulator Planner (HAMP)</B></FONT>
+      <HR WIDTH="100%" noshade>
 
-            <!--Research Field 1: Contribution 1: Detailed Explanation and videos-->
-			<P CLASS="justifytext"> <B>Abstract:-</B> We present a Hierarchical and Adaptive Mobile Manipulator Planner (HAMP) that plans for both the base and 
-			the arm in a judicious manner - allowing the manipulator to change its configuration autonomously when needed if the current arm 
-			configuration is in collision with the environment as the mobile manipulator moves along the planned path. This is in contrast to 
-			current implemented approaches that are conservative and fold the arm into a fixed home configuration. Our planner first constructs 
-			a base roadmap and then for each node in the roadmap it checks for collision status of current manipulator configuration along the 
-			edges formed with adjacent nodes, if the current manipulator configuration is in collision, the manipulator C-space is searched for 
-			a new reachable configuration such that it is collision-free as the mobile manipulator moves along the edge. We show that HAMP is 
-			probabilistically complete. We compared HAMP with full 9D PRM and observed that HAMP outperforms the full 9D PRM in each of the 
-			performance criteria, i.e., computational time, percentage of successful attempts, base path length, and most importantly, undesired 
-			motions of the arm.
+      <!--Research Field 1: Contribution 1: Detailed Explanation and videos-->
+			<P CLASS="justifytext"> <B>Abstract:-</B> We present a Hierarchical and Adaptive Mobile Manipulator Planner (HAMP) that plans for both the base and the arm in a judicious manner - allowing the manipulator to change its configuration autonomously when needed if the current arm configuration is in collision with the environment as the mobile manipulator moves along the planned path. This is in contrast to 
+			current implemented approaches that are conservative and fold the arm into a fixed home configuration. Our planner first constructs a base roadmap and then for each node in the roadmap it checks for collision status of current manipulator configuration along the edges formed with adjacent nodes, if the current manipulator configuration is in collision, the manipulator C-space is searched for a new reachable configuration such that it is collision-free as the mobile manipulator moves along the edge. We show that HAMP is probabilistically complete. We compared HAMP with full 9D PRM and observed that HAMP outperforms the full 9D PRM in each of the performance criteria, i.e., computational time, percentage of successful attempts, base path length, and most importantly, undesired motions of the arm.
 			
-			<P> <B>Read More:- </B>
-				<UL>
-				    <li>Vinay Pilania and Kamal Gupta, "A Hierarchical and Adaptive Mobile Manipulator Planner", <i>IEEE-RAS International 
-					Conference on Humanoid Robots (Humanoids)</i>, Madrid, November 2014, pp. 45-51. <A CLASS="file" HREF="PdfFiles/PilaniaAndGuptaHumanoids-14.pdf">[PDF]</A> 
-					<A CLASS="file" HREF="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7041336">[IEEE Xplore Link]</A>
-				</UL>
+			<P> 
+			<B>Read More:- </B>
+			<UL>
+			  <li>Vinay Pilania and Kamal Gupta, "A Hierarchical and Adaptive Mobile Manipulator Planner", <i>IEEE-RAS International Conference on Humanoid Robots (Humanoids)</i>, Madrid, November 2014, pp. 45-51. <A CLASS="file" HREF="PdfFiles/PilaniaAndGuptaHumanoids-14.pdf">[PDF]</A>    <A CLASS="file" HREF="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7041336">[IEEE Xplore Link]</A>
+			</UL>
 			
 			<!--*****************************************************************-->
 			<!--************************Video Adding Starts Here*****************-->
@@ -81,36 +76,36 @@
 			<H4>Simulation videos corresponding to scenarios B & C</H4>
 			<!--Simulation videos corresponding to scenarios B & C-->
 			<TABLE BORDER=0 WIDTH="100%" CELLPADDING="0" CELLSPACING="0" ALIGN="Center">
-			    <TR>
-                    <TD WIDTH="40%" ALIGN="Center"> 
-                      <video controls poster="videos/hamp_exp2.png" width="400" height="274">
-                				<source src="videos/hamp_exp2.mp4" type="video/mp4">
-                			</video>    
-                    </TD>
-                    <TD WIDTH="40%" ALIGN="Center">  
-                      <video controls poster="videos/hamp_exp3.png" width="400" height="274">
-                				<source src="videos/hamp_exp3.mp4" type="video/mp4">
-                			</video>  
-                    </TD>
-                </TR>
-            </TABLE>
+		    <TR>
+          <TD WIDTH="40%" ALIGN="Center"> 
+            <video controls poster="videos/hamp_exp2.png" width="400" height="274">
+      				<source src="videos/hamp_exp2.mp4" type="video/mp4">
+      			</video>    
+          </TD>
+          <TD WIDTH="40%" ALIGN="Center">  
+            <video controls poster="videos/hamp_exp3.png" width="400" height="274">
+      				<source src="videos/hamp_exp3.mp4" type="video/mp4">
+      			</video>  
+          </TD>
+        </TR>
+      </TABLE>
 
-            <H4>Simulation videos corresponding to scenarios D & E</H4>
+      <H4>Simulation videos corresponding to scenarios D & E</H4>
 			<!--Simulation videos corresponding to scenarios D & E-->
 			<TABLE BORDER=0 WIDTH="100%" CELLPADDING="0" CELLSPACING="0" ALIGN="Center">
-			    <TR>
-                    <TD WIDTH="40%" ALIGN="Center">  
-                    	<video controls poster="videos/hamp_exp4.png" width="400" height="274">
-                    		<source src="videos/hamp_exp4.mp4" type="video/mp4">
-                    	</video>      
-                    </TD>
-                    <TD WIDTH="40%" ALIGN="Center">  
-                      <video controls poster="videos/hamp_exp5.png" width="400" height="274">
-                  			<source src="videos/hamp_exp5.mp4" type="video/mp4">
-                  		</video>   
-                    </TD>
-                </TR>
-            </TABLE>
+		    <TR>
+          <TD WIDTH="40%" ALIGN="Center">  
+          	<video controls poster="videos/hamp_exp4.png" width="400" height="274">
+          		<source src="videos/hamp_exp4.mp4" type="video/mp4">
+          	</video>      
+          </TD>
+          <TD WIDTH="40%" ALIGN="Center">  
+            <video controls poster="videos/hamp_exp5.png" width="400" height="274">
+        			<source src="videos/hamp_exp5.mp4" type="video/mp4">
+        		</video>   
+          </TD>
+        </TR>
+      </TABLE>
 			<!--*****************************************************************-->
 			<!--************************Video Adding Ends Here*******************-->
 			<!--*****************************************************************-->
@@ -124,33 +119,21 @@
 
 			<!--Research Field 2: Contribution 1: Detailed Explanation and videos-->
 			<!--Some blank lines (space) before horizontal line-->
-			<P><BR><HR WIDTH="100%" noshade>
+			<P><BR>
+			<HR WIDTH="100%" noshade>
 			<FONT SIZE="+1"> <B id="HAMP-U">A Hierarchical and Adaptive Mobile Manipulator Planner with Base Pose Uncertainty (HAMP-U)</B></FONT>
-            <HR WIDTH="100%" noshade>
+      <HR WIDTH="100%" noshade>
 			<!--************************Put it below*****************************-->
-			<P CLASS="justifytext"> <B>Abstract:-</B> We present a Hierarchical and Adaptive Mobile Manipulator Planner (HAMP) that plans for both the base 
-			and the arm in a judicious manner - allowing the manipulator to change its configuration autonomously when needed if the current 
-			arm configuration is in collision with the environment as the mobile manipulator moves along the planned path. This is in contrast 
-			to current implemented approaches that are conservative and fold the arm into a fixed home configuration. Our planner first constructs 
-			a base roadmap and then for each node in the roadmap it checks for collision status of current manipulator configuration along the edges 
-			formed with adjacent nodes, if the current manipulator configuration is in collision, the manipulator C-space is searched for a new 
-			reachable configuration such that it is collision-free as the mobile manipulator moves along the edge and a path from current configuration 
-			to the new reachable configuration is computed. We show that HAMP is probabilistically complete. We compared HAMP with full 9D PRM and 
-			observed that the full 9D PRM is outperformed by HAMP in each of the performance criteria, i.e., computational time, percentage of 
-			successful attempts, base path length, and most importantly, undesired motions of the arm. We also evaluated the tree versions of HAMP, 
-			with RRT and Bi-directional RRT as core underlying sub-planners, and observed similar advantages, although the time saving  for 
-			Bi-directional RRT version is modest. We then present an extension of HAMP (we call it HAMP-U) that uses belief space planning 
-			to account for localization uncertainty associated with the mobile base position and ensures that the resultant path for the mobile 
-			manipulator has low uncertainty at the goal. Our  experimental results show that the paths generated by HAMP-U are less likely to 
-			result in collision and are safer to execute than those generated by HAMP (without incorporating uncertainty), thereby showing the 
-			importance of incorporating base pose uncertainty in our overall HAMP algorithm.
+			<P CLASS="justifytext"> <B>Abstract:-</B> We present a Hierarchical and Adaptive Mobile Manipulator Planner (HAMP) that plans for both the base and the arm in a judicious manner - allowing the manipulator to change its configuration autonomously when needed if the current arm configuration is in collision with the environment as the mobile manipulator moves along the planned path. This is in contrast to current implemented approaches that are conservative and fold the arm into a fixed home configuration. Our planner first constructs a base roadmap and then for each node in the roadmap it checks for collision status of current manipulator configuration along the edges formed with adjacent nodes, if the current manipulator configuration is in collision, the manipulator C-space is searched for a new 
+			reachable configuration such that it is collision-free as the mobile manipulator moves along the edge and a path from current configuration to the new reachable configuration is computed. We show that HAMP is probabilistically complete. We compared HAMP with full 9D PRM and observed that the full 9D PRM is outperformed by HAMP in each of the performance criteria, i.e., computational time, percentage of 
+			successful attempts, base path length, and most importantly, undesired motions of the arm. We also evaluated the tree versions of HAMP, with RRT and Bi-directional RRT as core underlying sub-planners, and observed similar advantages, although the time saving  for Bi-directional RRT version is modest. We then present an extension of HAMP (we call it HAMP-U) that uses belief space planning to account for localization uncertainty associated with the mobile base position and ensures that the resultant path for the mobile manipulator has low uncertainty at the goal. Our  experimental results show that the paths generated by HAMP-U are less likely to result in collision and are safer to execute than those generated by HAMP (without incorporating uncertainty), thereby showing the importance of incorporating base pose uncertainty in our overall HAMP algorithm.
 			
-			<P> <B>Read More:- </B>
-				<UL>
-				    <li>Vinay Pilania and Kamal Gupta, "A Hierarchical and Adaptive Mobile Manipulator Planner with Base Pose Uncertainty", 
-					<i>Autonomous Robots</i>, Volume 39, Issue 1, June 2015, pp. 65-85. <A CLASS="file" HREF="PdfFiles/PilaniaAndGuptaAURO-14.pdf">[PDF]</A>
-					<A CLASS="file" HREF="http://link.springer.com/article/10.1007/s10514-015-9427-2">[Springer Link]</A>
-				</UL>
+			<P> 
+			<B>Read More:- </B>
+			<UL>
+			  <li>Vinay Pilania and Kamal Gupta, "A Hierarchical and Adaptive Mobile Manipulator Planner with Base Pose Uncertainty", <i>Autonomous Robots</i>, Volume 39, Issue 1, June 2015, pp. 65-85. <A CLASS="file" HREF="PdfFiles/PilaniaAndGuptaAURO-14.pdf">[PDF]</A>
+				<A CLASS="file" HREF="http://link.springer.com/article/10.1007/s10514-015-9427-2">[Springer Link]</A>
+			</UL>
 
 			
 			<!--*****************************************************************-->
@@ -159,19 +142,19 @@
 			<H4>Real experiment on SFU Mobile Manipulator (left one)</H4>
 			<!--Real experiment on SFU Mobile Manipulator-->
 			<TABLE BORDER=0 WIDTH="100%" CELLPADDING="0" CELLSPACING="0" ALIGN="Center">
-			    <TR>
-                    <TD WIDTH="40%" ALIGN="Center">     
-                      <video controls poster="videos/hamp_real_exp.png" width="400" height="274">
-                				<source src="videos/hamp_real_exp.mp4" type="video/mp4">
-                			</video>
-                    </TD>
-                    <TD WIDTH="40%" ALIGN="Center">  
-                      <video controls poster="videos/hamp_exp2_gazebo.png" width="400" height="274">
-                				<source src="videos/hamp_exp2_gazebo.mp4" type="video/mp4">
-                			</video>   
-                    </TD>
-                </TR>
-            </TABLE>
+		    <TR>
+          <TD WIDTH="40%" ALIGN="Center">     
+            <video controls poster="videos/hamp_real_exp.png" width="400" height="274">
+      				<source src="videos/hamp_real_exp.mp4" type="video/mp4">
+      			</video>
+          </TD>
+          <TD WIDTH="40%" ALIGN="Center">  
+            <video controls poster="videos/hamp_exp2_gazebo.png" width="400" height="274">
+      				<source src="videos/hamp_exp2_gazebo.mp4" type="video/mp4">
+      			</video>   
+          </TD>
+        </TR>
+      </TABLE>
 			<!--*****************************************************************-->
 			<!--************************Video Adding Ends Here*******************-->
 			<!--*****************************************************************-->
@@ -179,74 +162,54 @@
 			
 			<!--Research Field 2: Contribution 2: Detailed Explanation and photos-->
 			<!--Some blank lines (space) before horizontal line-->
-			<P><BR><HR WIDTH="100%" noshade>
+			<P><BR>
+			<HR WIDTH="100%" noshade>
 			<FONT SIZE="+1"> <B id="LAS">A Localization Aware Sampling Strategy for Motion Planning under Uncertainty (LAS)</B></FONT>
-            <HR WIDTH="100%" noshade>
+      <HR WIDTH="100%" noshade>
 			<!--************************Put it below*****************************-->
-			<P CLASS="justifytext"> <B>Abstract:-</B> We present a localization aware efficient sampling strategy for sampling-based motion 
-			planning under uncertainty that uses a new notion of localization ability of a sample. It puts more samples in regions where sensor 
-			data is able to achieve higher uncertainty reduction while maintaining adequate samples in regions where uncertainty reduction is 
-			poor. This leads to a less dense roadmap and hence results in significant time savings in the path search phase. We provide simulation 
-			results that show stochastic planners with our sampling strategy place less samples and find a well-localized path in shorter time with 
-			little compromise on the quality of path as compared to existing sampling techniques. We also show that a stochastic planner that uses 
-			our sampling strategy is probabilistically complete under some reasonable conditions on parameters.
+			<P CLASS="justifytext"> <B>Abstract:-</B> We present a localization aware efficient sampling strategy for sampling-based motion planning under uncertainty that uses a new notion of localization ability of a sample. It puts more samples in regions where sensor data is able to achieve higher uncertainty reduction while maintaining adequate samples in regions where uncertainty reduction is poor. This leads to a less dense roadmap and hence results in significant time savings in the path search phase. We provide simulation results that show stochastic planners with our sampling strategy place less samples and find a well-localized path in shorter time with little compromise on the quality of path as compared to existing sampling techniques. We also show that a stochastic planner that uses our sampling strategy is probabilistically complete under some reasonable conditions on parameters.
 
-			<P> <B>Read More:- </B>
-				<UL>
-				    <li>Vinay Pilania and Kamal Gupta, "A Localization Aware Sampling Strategy for Motion Planning under Uncertainty", 
-					<i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i>, Hamburg, September 2015, pp. 6093-6099. 
-					<A CLASS="file" HREF="PdfFiles/IROS-15.pdf">[PDF]</A> 
-					<A CLASS="file" HREF="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7354245">[IEEE Xplore Link]</A>
-				</UL>
+			<P> 
+			<B>Read More:- </B>
+			<UL>
+			  <li>Vinay Pilania and Kamal Gupta, "A Localization Aware Sampling Strategy for Motion Planning under Uncertainty", <i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i>, Hamburg, September 2015, pp. 6093-6099. <A CLASS="file" HREF="PdfFiles/IROS-15.pdf">[PDF]</A> 
+				<A CLASS="file" HREF="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7354245">[IEEE Xplore Link]</A>
+			</UL>
 				
 			
 			<!--Research Field 2: Contribution 3: Detailed Explanation and photos-->
 			<!--Some blank lines (space) before horizontal line-->
-			<P><BR><HR WIDTH="100%" noshade>
+			<P><BR>
+			<HR WIDTH="100%" noshade>
 			<FONT SIZE="+1"> <B id="LASandLAC">Localization Aware Sampling and Connection Strategies for Incremental Motion Planning under Uncertainty</B></FONT>
-            <HR WIDTH="100%" noshade>
+      <HR WIDTH="100%" noshade>
 			<!--************************Put it below*****************************-->
-			<P CLASS="justifytext"> <B>Abstract:-</B> We present efficient localization aware sampling and connection strategies for incremental 
-			sampling-based stochastic motion planners. For sampling, we introduce a new measure of localization ability of a sample, one that is 
-			independent of the path taken to reach the sample and depends only on the sensor measurement at the sample. Using this measure, our 
-			sampling strategy puts more samples in regions where sensor data is able to achieve higher uncertainty reduction while maintaining 
-			adequate samples in regions where uncertainty reduction is poor. This leads to a less dense roadmap and hence results in significant 
-			time savings. We also show that a stochastic planner that uses our sampling strategy is probabilistically complete under some reasonable 
-			conditions on parameters. We then present a localization aware efficient connection strategy that uses an uncertainty aware approach in 
-			connecting the new sample to the neighbouring nodes, i.e., it uses an uncertainty measure (as opposed to distance) to connect the new 
-			sample to a neighbouring node so that the new sample is reachable with least uncertainty ("the closest"), and furthermore, connections 
-			to other neighbouring nodes are made only if the new path to them (via the new sample) helps to reduce the uncertainty at those nodes. 
-			This is in contrast to current incremental stochastic motion planners that simply connect the new sample to all of the neighbouring nodes 
-			and therefore, take more search queue iterations to update the paths (i.e., uncertainty propagation). Hence, our efficient connection 
-			strategy, in addition to eliminating the inefficient edges that do not contribute to better localization, also reduces the number of 
-			search queue iterations. We provide simulation results that show that a) our localization aware sampling strategy places less samples 
-			and find a well-localized path in shorter time with little compromise on the quality of path as compared to existing sampling techniques, 
-			b) our localization aware connection strategy finds a well-localized path in shorter time with no compromise on the quality of path as 
-			compared to existing connection techniques, and finally c) combined use of our sampling and connection strategies further reduces the 
-			planner run time.
+			<P CLASS="justifytext"> <B>Abstract:-</B> We present efficient localization aware sampling and connection strategies for incremental sampling-based stochastic motion planners. For sampling, we introduce a new measure of localization ability of a sample, one that is independent of the path taken to reach the sample and depends only on the sensor measurement at the sample. Using this measure, our 
+			sampling strategy puts more samples in regions where sensor data is able to achieve higher uncertainty reduction while maintaining adequate samples in regions where uncertainty reduction is poor. This leads to a less dense roadmap and hence results in significant time savings. We also show that a stochastic planner that uses our sampling strategy is probabilistically complete under some reasonable conditions on parameters. We then present a localization aware efficient connection strategy that uses an uncertainty aware approach in connecting the new sample to the neighbouring nodes, i.e., it uses an uncertainty measure (as opposed to distance) to connect the new sample to a neighbouring node so that the new sample is reachable with least uncertainty ("the closest"), and furthermore, connections to other neighbouring nodes are made only if the new path to them (via the new sample) helps to reduce the uncertainty at those nodes. This is in contrast to current incremental stochastic motion planners that simply connect the new sample to all of the neighbouring nodes and therefore, take more search queue iterations to update the paths (i.e., uncertainty propagation). Hence, our efficient connection strategy, in addition to eliminating the inefficient edges that do not contribute to better localization, also reduces the number of search queue iterations. We provide simulation results that show that a) our localization aware sampling strategy places less samples and find a well-localized path in shorter time with little compromise on the quality of path as compared to existing sampling techniques, b) our localization aware connection strategy finds a well-localized path in shorter time with no compromise on the quality of path as compared to existing connection techniques, and finally c) combined use of our sampling and connection strategies further reduces the planner run time.
 
-			<P> <B>Read More:- </B>
-				<UL>
-				    <li>Vinay Pilania and Kamal Gupta, "Localization Aware Sampling and Connection Strategies for Incremental Motion Planning under Uncertainty", 
-					<i>Autonomous Robots (accepted on Dec 10, 2015)</i>. <A CLASS="file" HREF="PdfFiles/AURO-15.pdf">[PDF]</A>
-					<A CLASS="file" HREF="http://link.springer.com/article/10.1007/s10514-015-9536-y">[Springer Link]</A>
-				</UL>
+			<P> 
+			<B>Read More:- </B>
+			<UL>
+			  <li>Vinay Pilania and Kamal Gupta, "Localization Aware Sampling and Connection Strategies for Incremental Motion Planning under Uncertainty", <i>Autonomous Robots</i>, Volume 41, Issue 1, January 2017, pp. 111-132. <A CLASS="file" HREF="PdfFiles/AURO-15.pdf">[PDF]</A>
+				<A CLASS="file" HREF="http://link.springer.com/article/10.1007/s10514-015-9536-y">[Springer Link]</A>
+			</UL>
 				
 			
 			<!--Research Field 2: Contribution 4: Detailed Explanation and photos-->
 			<!--Some blank lines (space) before horizontal line-->
-			<P><BR><HR WIDTH="100%" noshade>
+			<P><BR>
+			<HR WIDTH="100%" noshade>
 			<FONT SIZE="+1"> <B id="HAMP-BAU">Mobile Manipulator Planning under Uncertainty in Unknown Environments (HAMP-BUA and HAMP-BUA-TC)</B></FONT>
-            <HR WIDTH="100%" noshade>
+      <HR WIDTH="100%" noshade>
 			<!--************************Put it below*****************************-->
 			<P CLASS="justifytext"> <B>Abstract:-</B> We present a sampling-based mobile manipulator planner that considers the base pose uncertainty and the effects of this uncertainty on manipulator motions. The overall planner has three distinct and novel features: i) it uses the Hierarchical and Adaptive Mobile Manipulator Planner (HAMP) that plans for both the base and the arm in a judicious manner, ii) it uses localization aware sampling and connection strategies to consider only those nodes and edges which contribute toward better localization, iii) it incorporates base pose uncertainty along the edges (where arm remains static) and the effects of this uncertainty are considered on arm motion. We call this overall planner HAMP-BUA, where BUA stands for Base pose Uncertainty and its propagation to Arm motions. First we evaluate our planner in known static environments and show that it finds a safer path as compared to other variants where uncertainty is not considered at different levels as mentioned above. Next, we incorporate our planner within an integrated and fully autonomous system for mobile pick-and-place tasks in unknown static environments. A key aspect of our integrated system is that the planner works in tandem with base and arm exploration modules that explore the unknown environment. Our system is implemented both in simulation and on the actual SFU mobile manipulator and we present the corresponding results. It demonstrates a level of competency in exploring unknown environments for carrying out pick-and-place tasks that has not been demonstrated before.
 
 			
-			<P> <B>Read More:- </B>
-				<UL>
-				    <li>Vinay Pilania and Kamal Gupta, "Mobile Manipulator Planning under Uncertainty in Unknown Environments", 
-					<i>submitted to IJRR (under review)</i>.
-				</UL>
+			<P> 
+			<B>Read More:- </B>
+			<UL>
+			  <li>Vinay Pilania and Kamal Gupta, "Mobile Manipulator Planning under Uncertainty in Unknown Environments", <i>International Journal of Robotics Research </i>, Volume 37, Issue 2-3, January 2018. <A CLASS="file" HREF="PdfFiles/PilaniaAndGuptaIJRR2017.pdf">[PDF]</A>        <A CLASS="file" HREF="https://journals.sagepub.com/doi/10.1177/0278364918754677">[Sage Link]</A>
+			</UL>
 			
 			<!--*****************************************************************-->
 			<!--************************Video Adding Starts Here*****************-->
@@ -254,36 +217,36 @@
 			<H4>Real Experiments: [left] HAMP-BUA in unknown environment, [right] HAMP-BUA-TC in known environment</H4>
 			<!--Real experiment on SFU Mobile Manipulator-->
 			<TABLE BORDER=0 WIDTH="100%" CELLPADDING="0" CELLSPACING="0" ALIGN="Center">
-			    <TR>
-                    <TD WIDTH="40%" ALIGN="Center">   
-                      <video controls poster="videos/hamp_bau_3.png" width="400" height="274">
-              					<source src="videos/hamp_bau_3.mp4" type="video/mp4">
-              				</video>  
-                    </TD>
-                    <TD WIDTH="40%" ALIGN="Center">   
-                      <video controls poster="videos/hamp_bau_4.png" width="400" height="274">
-              					<source src="videos/hamp_bau_4.mp4" type="video/mp4">
-              				</video>  
-                    </TD>
-                </TR>
-            </TABLE>
+		    <TR>
+          <TD WIDTH="40%" ALIGN="Center">   
+            <video controls poster="videos/hamp_bau_3.png" width="400" height="274">
+    					<source src="videos/hamp_bau_3.mp4" type="video/mp4">
+    				</video>  
+          </TD>
+          <TD WIDTH="40%" ALIGN="Center">   
+            <video controls poster="videos/hamp_bau_4.png" width="400" height="274">
+    					<source src="videos/hamp_bau_4.mp4" type="video/mp4">
+    				</video>  
+          </TD>
+        </TR>
+      </TABLE>
 			
 			<H4>Simulations: [left] HAMP-BUA in unknown environment, [right] HAMP-BUA-TC in known environment</H4>
 			<!--Real experiment on SFU Mobile Manipulator-->
 			<TABLE BORDER=0 WIDTH="100%" CELLPADDING="0" CELLSPACING="0" ALIGN="Center">
-			    <TR>
-                    <TD WIDTH="40%" ALIGN="Center"> 
-                      <video controls poster="videos/hamp_bau_1.png" width="400" height="274">
-            						<source src="videos/hamp_bau_1.mp4" type="video/mp4">
-            					</video>    
-                    </TD>
-                    <TD WIDTH="40%" ALIGN="Center"> 
-                      <video controls poster="videos/hamp_bau_2.png" width="400" height="274">
-          							<source src="videos/hamp_bau_2.mp4" type="video/mp4">
-          						</video>    
-                    </TD>
-                </TR>
-            </TABLE>
+			  <TR>
+          <TD WIDTH="40%" ALIGN="Center"> 
+            <video controls poster="videos/hamp_bau_1.png" width="400" height="274">
+  						<source src="videos/hamp_bau_1.mp4" type="video/mp4">
+  					</video>    
+          </TD>
+          <TD WIDTH="40%" ALIGN="Center"> 
+            <video controls poster="videos/hamp_bau_2.png" width="400" height="274">
+							<source src="videos/hamp_bau_2.mp4" type="video/mp4">
+						</video>    
+          </TD>
+        </TR>
+      </TABLE>
 			<!--*****************************************************************-->
 			<!--************************Video Adding Ends Here*******************-->
 			<!--*****************************************************************-->
